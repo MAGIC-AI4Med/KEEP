@@ -33,23 +33,29 @@ If you have any question, please feel free to contact zhouxiao@pjlab.org.cn. -->
 
 <!-- # TITAN-preview -->
 
-The official codes for "A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"
+The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"**
 
 [Preprint](https://arxiv.org/abs/2412.18***) | [Download Model](https://huggingface.co/Astaxanthin/KEEP) | [Webpage](https://loiesun.github.io/keep/) | [Cite](#reference)
 
+---
 
 **Abstract:** Deep learning has enabled the development of highly robust foundation models for various pathological tasks across diverse diseases and patient cohorts. Among these models, vision-language pre-training, which leverages large-scale paired data to align pathology image and text embedding spaces, and provides a novel zero-shot paradigm for downstream tasks. However, existing models have been primarily data-driven and lack the incorporation of domain-specific knowledge, which limits their performance in cancer diagnosis, especially for rare tumor subtypes. To address this limitation, we establish a **K**nowledg**E**-**E**nhanced **P**athology (**KEEP**) foundation model that harnesses disease knowledge to facilitate vision-language pre-training. Specifically, we first construct a disease knowledge graph (KG) that covers 11,454 human diseases with 139,143 disease attributes, including synonyms, definitions, and hypernym relations. We then systematically reorganize the millions of publicly available noisy pathology image-text pairs, into 143K well-structured semantic groups linked through the hierarchical relations of the disease KG. To derive more nuanced image and text representations, we propose a novel knowledge-enhanced vision-language pre-training approach that integrates disease knowledge into the alignment within hierarchical semantic groups instead of unstructured image-text pairs. Validated on 18 diverse benchmarks with more than 14,000 whole slide images (WSIs), KEEP achieves state-of-the-art performance in zero-shot cancer diagnostic tasks. Notably, for cancer detection, KEEP demonstrates an average sensitivity of 89.8% at a specificity of 95.0% across 7 cancer types, significantly outperforming vision-only foundation models and highlighting its promising potential for clinical application. For cancer subtyping, KEEP achieves a median balanced accuracy of 0.456 in subtyping 30 rare brain cancers, indicating strong generalizability for diagnosing rare tumors. All codes and models will be available for reproducing our results.
 
 <img src="resources/teaser.png" alt="TITAN workflow" width="800" />
 
+---
+
+## Updates
+<!-- - **12/04/2024**: CONCHv1.5 feature extraction is integrated into [CLAM](https://github.com/mahmoodlab/CLAM). -->
+**[12/18/2024]**: Code and model weights are now live. 
+**[12/18/2024]**: We published the paper on ArXiv(https://arxiv.org/abs/2411.19666)
+
+---
+
 ## What is KEEP? 
 **KEEP** (**K**nowledg**E**-**E**nhanced **P**athology) is a foundation model designed for cancer diagnosis that integrates disease knowledge into vision-language pre-training. It utilizes a comprehensive disease knowledge graph (KG) containing 11,454 human diseases and 139,143 disease attributes, such as synonyms, definitions, and hierarchical relationships. KEEP reorganizes millions of publicly available noisy pathology image-text pairs into 143K well-structured semantic groups based on the hierarchical relations of the disease KG. By incorporating disease knowledge into the alignment process, KEEP achieves more nuanced image and text representations. The model is validated on 18 diverse benchmarks with over 14,000 whole-slide images (WSIs), demonstrating state-of-the-art performance in zero-shot cancer diagnosis, including an average sensitivity of 89.8% for cancer detection across 7 cancer types. KEEP also excels in subtyping rare cancers, achieving strong generalizability in diagnosing rare tumor subtypes.
 - _**Why we need KNOWLEDGE?**_: We need knowledge integration in computational pathology to address the limitations of existing models, which often struggle with data scarcity, noisy annotations, and the complexity of cancer subtypes. Domain-specific knowledge, such as disease ontologies and medical terminologies, provides a structured framework that enhances the model’s understanding of pathology images by incorporating clinically relevant context. This knowledge helps improve model accuracy and generalizability, particularly in data-scarce or rare disease settings. Furthermore, it aids in distinguishing subtle disease manifestations, ensuring more precise diagnosis and better performance on downstream tasks like cancer detection and subtyping.
 
-## Updates
-<!-- - **12/04/2024**: CONCHv1.5 feature extraction is integrated into [CLAM](https://github.com/mahmoodlab/CLAM). -->
-- **12/16/2024**: Code and model weights are now live. 
-- **12/16/2024**: We published the paper on ArXiv(https://arxiv.org/abs/2411.19666)
 
 ## Quick Start
 
