@@ -39,7 +39,7 @@ keep = AutoModel.from_pretrained('Astaxanthin/KEEP', trust_remote_code=True)
 
 
 ## Evaluation on WSIs 
-We provide a ```.py``` file for fast evaluation on WSIs as follows. You  need to change ```--data_path``` to the path where your WSIs are stored.
+We provide a ```.py``` file for fast evaluation on WSIs as follows. You  need to change ```--data_path``` to the path where your WSIs are stored. In this part, you only need one 4090 GPU.
 
 ```bash
 cd evaluation
@@ -66,7 +66,7 @@ python data_cluster.py --image_path /path/to/images/ --text_path /path/to/texts/
 ## Knowledge Construction and Encoding
 For knowledge graph construction, we download the knowledge structure from  [Disease Ontolog (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
 
-For disease knowledge encoding, we train the knowldge encoder similar with our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You could find more detailed information in the repository.
+For disease knowledge encoding, we train the knowldge encoder similar with our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You could find more detailed information in the repository. In this part, we use four A100 GPUs.
 
 ## Vision-language Pre-training
 
@@ -88,8 +88,19 @@ pip install -r requirements.txt
 ```
 
 ## Traning
+If you need to retrain the model, you could refer to the following code and modify the relevant parameters. In this part, we only use one A100 GPU.
 
+```bash
+cd training
 
+CUDA_VISIBLE_DEVICES=0
+python main.py 
+      --data-path /path/to/data/
+      --save-path /path/to/save/
+      --num-workers 8
+      --batch-size 512
+      --warmup 1000
+```
 
 ## Performance Comparisons with Other Models
 
@@ -116,14 +127,14 @@ We present benchmark results for a range of representative tasks. A complete set
 ### Cancer Region Segmentation(DICE) 
 | Models     | PLIP [[1]](https://www.nature.com/articles/s41591-023-02504-3) |   QuiltNet [[2]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/775ec578876fa6812c062644964b9870-Abstract-Datasets_and_Benchmarks.html)      |   MI-Zero (Pub) [[3]](https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html)     |   CONCH [[4]](https://www.nature.com/articles/s41591-024-02856-4) |   **KEEP(Ours)**  |
 |:---------------|--------------:|---------------------------:|-------------------------:|-----------------:|------------------:|
-| TCGA-BRCA | 0.519 | 0.500 | 0.633 | 0.727 | 0.774 |
-| TCGA-NSCLC | 0.699 | 0.667 | 0.753 | 0.901 | 0.902 |
-| TCGA-RCC | 0.735 | 0.755 | 0.908 | 0.921 | 0.926 |
-| TCGA-ESCA | 0.614 | 0.746 | 0.954 | 0.923 | 0.977 |
-| TCGA-BRAIN | 0.361 | 0.346 | 0.361 | 0.453 | 0.604 |
-| UBC-OCEAN | 0.343 | 0.469 | 0.652 | 0.674 | 0.661 |
-| CPTAC-NSCLC | 0.647 | 0.607 | 0.643 | 0.836 | 0.863 |
-| EBRAINS | 0.096 | 0.093 | 0.325 | 0.371 | 0.456 |
+| TCGA-BRCA | 0.519 | 0.500 | 0.633 | 0.727 | **0.774** |
+| TCGA-NSCLC | 0.699 | 0.667 | 0.753 | 0.901 | **0.902** |
+| TCGA-RCC | 0.735 | 0.755 | 0.908 | 0.921 | **0.926** |
+| TCGA-ESCA | 0.614 | 0.746 | 0.954 | 0.923 | **0.977** |
+| TCGA-BRAIN | 0.361 | 0.346 | 0.361 | 0.453 | **0.604** |
+| UBC-OCEAN | 0.343 | 0.469 | 0.652 | 0.674 | **0.661** |
+| CPTAC-NSCLC | 0.647 | 0.607 | 0.643 | 0.836 | **0.863** |
+| EBRAINS | 0.096 | 0.093 | 0.325 | 0.371 | **0.456** |
 
 
 ## Acknowledgements
