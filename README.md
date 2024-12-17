@@ -39,7 +39,7 @@ keep = AutoModel.from_pretrained('Astaxanthin/KEEP', trust_remote_code=True)
 
 
 ## Evaluation on WSIs 
-We provide a ```.py``` file for fast evaluation on WSIs as follows. You will need to change --data_path to the location where your WSIs are stored.
+We provide a ```.py``` file for fast evaluation on WSIs as follows. You  need to change ```--data_path``` to the path where your WSIs are stored.
 
 ```bash
 cd evaluation
