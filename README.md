@@ -4,7 +4,7 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 [Preprint](https://arxiv.org/abs/2412.18***) | [Download Model](https://huggingface.co/Astaxanthin/KEEP) | [Webpage](https://loiesun.github.io/keep/) | [Cite](#reference)
 
----
+--
 
 **Abstract:** Deep learning has enabled the development of highly robust foundation models for various pathological tasks across diverse diseases and patient cohorts. Among these models, vision-language pre-training, which leverages large-scale paired data to align pathology image and text embedding spaces, and provides a novel zero-shot paradigm for downstream tasks. However, existing models have been primarily data-driven and lack the incorporation of domain-specific knowledge, which limits their performance in cancer diagnosis, especially for rare tumor subtypes. To address this limitation, we establish a **K**nowledg**E**-**E**nhanced **P**athology (**KEEP**) foundation model that harnesses disease knowledge to facilitate vision-language pre-training. Specifically, we first construct a disease knowledge graph (KG) that covers 11,454 human diseases with 139,143 disease attributes, including synonyms, definitions, and hypernym relations. We then systematically reorganize the millions of publicly available noisy pathology image-text pairs, into 143K well-structured semantic groups linked through the hierarchical relations of the disease KG. To derive more nuanced image and text representations, we propose a novel knowledge-enhanced vision-language pre-training approach that integrates disease knowledge into the alignment within hierarchical semantic groups instead of unstructured image-text pairs. Validated on 18 diverse benchmarks with more than 14,000 whole slide images (WSIs), KEEP achieves state-of-the-art performance in zero-shot cancer diagnostic tasks. Notably, for cancer detection, KEEP demonstrates an average sensitivity of 89.8% at a specificity of 95.0% across 7 cancer types, significantly outperforming vision-only foundation models and highlighting its promising potential for clinical application. For cancer subtyping, KEEP achieves a median balanced accuracy of 0.456 in subtyping 30 rare brain cancers, indicating strong generalizability for diagnosing rare tumors. All codes and models will be available for reproducing our results.
 
@@ -63,7 +63,7 @@ python text_processing.py --data_path /path/to/texts/
 python data_cluster.py --image_path /path/to/images/ --text_path /path/to/texts/ --structured_data_path /path/to/save/
 ``` 
 
-## Knowledge Construction
+## Knowledge Construction and Encoding
 For knowledge graph construction, we download the knowledge structure from  [Disease Ontolog (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
 
 For disease knowledge encoding, we train the knowldge encoder similar with our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You could find more detailed information in the repository.
@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 
 
-## Comparisons & Additional Benchmarks 
+## Comparisons with Other Models
 
 We present benchmark results for a range of representative tasks. A complete set of benchmarks can be found in the [paper](https://arxiv.org/abs/2412.18***). These results will be updated with each new iteration of KEEP. 
 
