@@ -10,14 +10,12 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 <img src="resources/teaser.png" alt="workflow" width="800" />
 
----
 
 ## News
 **[12/18/2024]**: Code and model weights are now live. 
 
 **[12/18/2024]**: We published the paper on ArXiv(https://arxiv.org/abs/2412.18***)
 
----
 
 ## What is KEEP? 
 **KEEP** (**K**nowledg**E**-**E**nhanced **P**athology) is a foundation model designed for cancer diagnosis that integrates disease knowledge into vision-language pre-training. It utilizes a comprehensive disease knowledge graph (KG) containing 11,454 human diseases and 139,143 disease attributes, such as synonyms, definitions, and hierarchical relationships. KEEP reorganizes millions of publicly available noisy pathology image-text pairs into 143K well-structured semantic groups based on the hierarchical relations of the disease KG. By incorporating disease knowledge into the alignment process, KEEP achieves more nuanced image and text representations. The model is validated on 18 diverse benchmarks with over 14,000 whole-slide images (WSIs), demonstrating state-of-the-art performance in zero-shot cancer diagnosis, including an average sensitivity of 89.8% for cancer detection across 7 cancer types. KEEP also excels in subtyping rare cancers, achieving strong generalizability in diagnosing rare tumor subtypes.
@@ -87,7 +85,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Traning
+### Training
 If you need to retrain the model, you could refer to the following code and modify the relevant parameters. In this part, we only use one A100 GPU.
 
 ```bash
