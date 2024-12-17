@@ -1,38 +1,5 @@
 # KEEP
 
-
-<!-- <div align="center">
-  <img src="./assets/logo.png" width="200"/>
-  <div align="center"></div>
-</div> -->
-
-
-<!-- The official codes for "A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis". -->
-
-<!-- ## News -->
-<!-- 
-## Overview
-
-![](image/teaser.png) -->
-
-<!-- ## News -->
-
-<!-- code coming soon .. 🌟 -->
-
-
-<!-- ## Acknowledgement
--->
-<!-- 
-## Contact
-If you have any question, please feel free to contact zhouxiao@pjlab.org.cn. -->
-
-<!-- ## Citation
-```
-
-``` -->
-
-<!-- # TITAN-preview -->
-
 The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"**
 
 [Preprint](https://arxiv.org/abs/2412.18***) | [Download Model](https://huggingface.co/Astaxanthin/KEEP) | [Webpage](https://loiesun.github.io/keep/) | [Cite](#reference)
@@ -41,14 +8,14 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 **Abstract:** Deep learning has enabled the development of highly robust foundation models for various pathological tasks across diverse diseases and patient cohorts. Among these models, vision-language pre-training, which leverages large-scale paired data to align pathology image and text embedding spaces, and provides a novel zero-shot paradigm for downstream tasks. However, existing models have been primarily data-driven and lack the incorporation of domain-specific knowledge, which limits their performance in cancer diagnosis, especially for rare tumor subtypes. To address this limitation, we establish a **K**nowledg**E**-**E**nhanced **P**athology (**KEEP**) foundation model that harnesses disease knowledge to facilitate vision-language pre-training. Specifically, we first construct a disease knowledge graph (KG) that covers 11,454 human diseases with 139,143 disease attributes, including synonyms, definitions, and hypernym relations. We then systematically reorganize the millions of publicly available noisy pathology image-text pairs, into 143K well-structured semantic groups linked through the hierarchical relations of the disease KG. To derive more nuanced image and text representations, we propose a novel knowledge-enhanced vision-language pre-training approach that integrates disease knowledge into the alignment within hierarchical semantic groups instead of unstructured image-text pairs. Validated on 18 diverse benchmarks with more than 14,000 whole slide images (WSIs), KEEP achieves state-of-the-art performance in zero-shot cancer diagnostic tasks. Notably, for cancer detection, KEEP demonstrates an average sensitivity of 89.8% at a specificity of 95.0% across 7 cancer types, significantly outperforming vision-only foundation models and highlighting its promising potential for clinical application. For cancer subtyping, KEEP achieves a median balanced accuracy of 0.456 in subtyping 30 rare brain cancers, indicating strong generalizability for diagnosing rare tumors. All codes and models will be available for reproducing our results.
 
-<img src="resources/teaser.png" alt="TITAN workflow" width="800" />
+<img src="resources/teaser.png" alt="workflow" width="800" />
 
 ---
 
-## Updates
-<!-- - **12/04/2024**: CONCHv1.5 feature extraction is integrated into [CLAM](https://github.com/mahmoodlab/CLAM). -->
+## News
 **[12/18/2024]**: Code and model weights are now live. 
-**[12/18/2024]**: We published the paper on ArXiv(https://arxiv.org/abs/2411.19666)
+
+**[12/18/2024]**: We published the paper on ArXiv(https://arxiv.org/abs/2412.18***)
 
 ---
 
@@ -59,10 +26,7 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 ## Quick Start
 
-
-### 1. Downloading weights + Creating model
-
-You could download models directly from huggingface model hub as follows. It includes the functionalities to extract patch embeddings and to perform zero-shot classification. 
+You can directly download the models from the huggingface as shown below. These models also include functionality to extract patch embeddings for downstream tasks.
 
 ```python
 from huggingface_hub import login
@@ -70,72 +34,39 @@ from transformers import AutoModel
 
 login()  # login with your User Access Token, found at https://huggingface.co/settings/tokens
 
-titan = AutoModel.from_pretrained('Loie/KEEP', trust_remote_code=True)
-# conch, eval_transform = titan.return_conch()
+keep = AutoModel.from_pretrained('Astaxanthin/KEEP', trust_remote_code=True)
 ```
 
 
-## WSIs Evaluation
-
-### 2. Running Inference
-
-<!-- You can directly use TITAN-preview for slide-level feature extraction. TITAN builds a feature grids from CONCH v1.5 patch features using the coordinates and the distance between the patches. As patch coordinates are always saved at the slides' level 0 magnification, TITAN takes patch_size_lv0 which represents the distance between two adjacent patches at level 0 magnification. It is 1024 if slide is 40x, or 512 if slide is 20x. We have this info saved in our demo TCGA features. -->
-
-<!-- **Patch feature extraction** [CLAM](https://github.com/mahmoodlab/CLAM) can also be used for patch feature extraction with CONCHv1.5. When using `extract_features_fp.py`, set `--model_name` to 'conch_v1_5'. -->
-
-<!-- **Slide feature extraction** Slide-level feature extraction can be done in the following way:
-
-```python
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = model.to(device)
-
-# load TCGA sample data
-from huggingface_hub import hf_hub_download
-demo_h5_path = hf_hub_download(
-    "MahmoodLab/TITAN", 
-    filename="TCGA_demo_features/TCGA-PC-A5DK-01Z-00-DX1.C2D3BC09-411F-46CF-811B-FDBA7C2A295B.h5",
-)
-file = h5py.File(demo_h5_path, 'r')
-features = torch.from_numpy(file['features'][:])
-coords = torch.from_numpy(file['coords'][:])
-patch_size_lv0 = file['coords'].attrs['patch_size_level0']
-
-# extract slide embedding
-with torch.autocast('cuda', torch.float16), torch.inference_mode():
-    features = features.to(device)
-    coords = coords.to(device)
-    slide_embedding = model.encode_slide_from_patch_features(features, coords, patch_size_lv0)
-``` -->
+## Evaluation on WSIs 
 
 
 ## Dataset Structuring
-yolov8
+yolov8st
 
 ## Knowladge Graph
 
 ## Vision-language Pre-training
 
 ### Installation
-
-First clone the repo and cd into the directory:
+Start by cloning the repository and cd into the directory:
 
 ```bash
 git clone https://github.com/MAGIC-AI4Med/KEEP.git
 cd KEEP
 ```
 
-Then create a conda env and install the dependencies:
+Next, create a conda environment and install the dependencies:
 
 ```bash
 conda create -n keep python=3.8 -y
 conda activate keep
 pip install --upgrade pip
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
+## Traning
 
-
-## Knowledge-guided Dataset Structuring
 
 
 ## Comparisons & Additional Benchmarks 
