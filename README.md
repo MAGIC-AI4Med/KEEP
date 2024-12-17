@@ -114,12 +114,12 @@ We present benchmark results for a range of representative tasks. A complete set
 ### Cancer Detection(AUROC)
 | Models | CHIEF[[1]](https://www.nature.com/articles/s41586-024-07894-z) |   PLIP [[2]](https://www.nature.com/articles/s41591-023-02504-3)   |   QuiltNet [[3]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/775ec578876fa6812c062644964b9870-Abstract-Datasets_and_Benchmarks.html)     |   MI-Zero (Pub) [[4]](https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html) |   CONCH [[5]](https://www.nature.com/articles/s41591-024-02856-4) | KEEP(Ours) |
 |:---------------|--------------:|--------------------:|-----------------:|-----------------:|------------------:| -----------------:|
-| CPTAC-CM | 0.915 | 0.970 | 0.972 | 0.985 | 0.994 | **0.994** | 
+| CPTAC-CM | 0.915 | 0.970 | 0.972 | 0.985 | **0.994** | **0.994** | 
 | CPTAC-CCRCC | 0.723 | 0.330 | 0.755 | 0.886 | 0.871 | **0.999** |
 | CPTAC-PDA | 0.825 | 0.391 | 0.464 | 0.796 | 0.920 | **0.929** |
 | CPTAC-UCEC | 0.955 | 0.945 | 0.973 | 0.979 | 0.996 | **0.998** | 
-| CPTAC-LSCC | 0.901 | 0.965 | 0.966 | 0.910 | 0.987 | **0.983** | 
-| CPTAC-HNSCC | 0.946 | 0.898 | 0.874 | 0.918 | 0.982 | **0.976** | 
+| CPTAC-LSCC | 0.901 | 0.965 | 0.966 | 0.910 | **0.987** | 0.983 | 
+| CPTAC-HNSCC | 0.946 | 0.898 | 0.874 | 0.918 | **0.982** | 0.976 | 
 | CPTAC-LUAD | 0.891 | 0.988 | 0.991 | 0.981 | 0.999 | **1.000** |  
 
 ### Cancer Region Segmentation(DICE) 
@@ -130,7 +130,7 @@ We present benchmark results for a range of representative tasks. A complete set
 | TCGA-RCC | 0.735 | 0.755 | 0.908 | 0.921 | **0.926** |
 | TCGA-ESCA | 0.614 | 0.746 | 0.954 | 0.923 | **0.977** |
 | TCGA-BRAIN | 0.361 | 0.346 | 0.361 | 0.453 | **0.604** |
-| UBC-OCEAN | 0.343 | 0.469 | 0.652 | 0.674 | **0.661** |
+| UBC-OCEAN | 0.343 | 0.469 | 0.652 | **0.674** | 0.661 |
 | CPTAC-NSCLC | 0.647 | 0.607 | 0.643 | 0.836 | **0.863** |
 | EBRAINS | 0.096 | 0.093 | 0.325 | 0.371 | **0.456** |
 
