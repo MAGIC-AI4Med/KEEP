@@ -26,7 +26,7 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 ## Quick Start
 
-You can directly download the models from the huggingface as shown below. These models also include functionality to extract patch embeddings for downstream tasks.
+You could directly download the models from the huggingface as shown below. These models also include functionality to extract patch embeddings for downstream tasks.
 
 ```python
 from huggingface_hub import login
@@ -48,7 +48,20 @@ python evaluation_wsis.py --data_path /path/to/wsi/
 
 
 ## Dataset Structuring
-yolov8st
+We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can directly download the fine-tuned Yolov8 model from [Google Drive](https://drive.google.com/drive/my-drive) .
+
+```bash
+cd data
+
+# detection pathology image in slide
+python detection.py --data_path /path/to/images/ --model_path /path/to/yolov8/
+
+# textual refinement: extract entities, paraphrased by templates
+python text_processing.py --data_path /path/to/texts/ 
+
+# image-text data cluster
+python data_cluster.py --image_path /path/to/images/ --text_path /path/to/texts/ --structured_data_path /path/to/save/
+``` 
 
 ## Knowledge Construction
 For knowledge graph construction, we download the knowledge structure from  [Disease Ontolog (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
