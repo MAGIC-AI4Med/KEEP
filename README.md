@@ -1,4 +1,4 @@
-# KEEP-preview
+# KEEP
 
 
 <!-- <div align="center">
@@ -33,7 +33,7 @@ If you have any question, please feel free to contact zhouxiao@pjlab.org.cn. -->
 
 <!-- # TITAN-preview -->
 
-## A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis
+The official codes for "A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"
 
 [Preprint](https://arxiv.org/abs/2412.18***) | [Download Model](https://huggingface.co/Astaxanthin/KEEP) | [Webpage](https://loiesun.github.io/keep/) | [Cite](#reference)
 
