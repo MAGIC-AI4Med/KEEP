@@ -50,7 +50,10 @@ python evaluation_wsis.py --data_path /path/to/wsi/
 ## Dataset Structuring
 yolov8st
 
-## Knowladge Graph
+## Knowledge Construction
+For knowledge graph construction, we download the knowledge structure from  [Disease Ontolog](https://disease-ontology.org/do/). Then, we search for synonyms in UMLS based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
+
+For disease knowledge encoding, we train the knowldge encoder similar with our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You could find more detailed information in the repository.
 
 ## Vision-language Pre-training
 
