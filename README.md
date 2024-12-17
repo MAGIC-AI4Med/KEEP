@@ -51,7 +51,7 @@ python evaluation_wsis.py --data_path /path/to/wsi/
 yolov8st
 
 ## Knowledge Construction
-For knowledge graph construction, we download the knowledge structure from  [Disease Ontolog](https://disease-ontology.org/do/). Then, we search for synonyms in UMLS based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
+For knowledge graph construction, we download the knowledge structure from  [Disease Ontolog (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
 
 For disease knowledge encoding, we train the knowldge encoder similar with our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You could find more detailed information in the repository.
 
