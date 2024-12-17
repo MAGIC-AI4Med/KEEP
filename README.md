@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 
 
-## Comparisons with Other Models
+## Performance Comparisons with Other Models
 
 We present benchmark results for a range of representative tasks. A complete set of benchmarks can be found in the [paper](https://arxiv.org/abs/2412.18***). These results will be updated with each new iteration of KEEP. 
 
