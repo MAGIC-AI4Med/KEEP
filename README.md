@@ -104,14 +104,14 @@ python main.py
 
 We present benchmark results for a range of representative tasks. A complete set of benchmarks can be found in the [paper](https://arxiv.org/abs/2412.18***). These results will be updated with each new iteration of KEEP. 
 
-### Cancer Region Segmentation(DICE) 
+### Zero-shot Cancer Region Segmentation (DICE) 
 | Models | PLIP[[1]](https://www.nature.com/articles/s41591-023-02504-3) | QuiltNet [[2]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/775ec578876fa6812c062644964b9870-Abstract-Datasets_and_Benchmarks.html) |   MI-Zero (Pub) [[3]](https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html) | CONCH [[4]](https://www.nature.com/articles/s41591-024-02856-4) | **KEEP(Ours)**  |
 |:---------------|--------------:|---------------------:|-------------------------:|-----------------:|------------------:|
 | CAMELYON16 | 0.253 | 0.157 | 0.186 | 0.292 | **0.361** |
 | PANDA | 0.295 | 0.309 | 0.276 | 0.315 | **0.334** |
 | AGGC22 | 0.284 | 0.282 | 0.324 | 0.449 | **0.530** |
 
-### Cancer Detection(AUROC)
+### Zero-shot Cancer Detection (AUROC)
 | Models | CHIEF[[1]](https://www.nature.com/articles/s41586-024-07894-z) |   PLIP [[2]](https://www.nature.com/articles/s41591-023-02504-3)   |   QuiltNet [[3]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/775ec578876fa6812c062644964b9870-Abstract-Datasets_and_Benchmarks.html)     |   MI-Zero (Pub) [[4]](https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html) |   CONCH [[5]](https://www.nature.com/articles/s41591-024-02856-4) | KEEP(Ours) |
 |:---------------|--------------:|--------------------:|-----------------:|-----------------:|------------------:| -----------------:|
 | CPTAC-CM | 0.915 | 0.970 | 0.972 | 0.985 | **0.994** | **0.994** | 
@@ -122,7 +122,7 @@ We present benchmark results for a range of representative tasks. A complete set
 | CPTAC-HNSCC | 0.946 | 0.898 | 0.874 | 0.918 | **0.982** | 0.976 | 
 | CPTAC-LUAD | 0.891 | 0.988 | 0.991 | 0.981 | 0.999 | **1.000** |  
 
-### Cancer Region Segmentation(DICE) 
+### Zero-shot Cancer Subtyping (BACC) 
 | Models     | PLIP [[1]](https://www.nature.com/articles/s41591-023-02504-3) |   QuiltNet [[2]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/775ec578876fa6812c062644964b9870-Abstract-Datasets_and_Benchmarks.html)      |   MI-Zero (Pub) [[3]](https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html)     |   CONCH [[4]](https://www.nature.com/articles/s41591-024-02856-4) |   **KEEP(Ours)**  |
 |:---------------|--------------:|---------------------------:|-------------------------:|-----------------:|------------------:|
 | TCGA-BRCA | 0.519 | 0.500 | 0.633 | 0.727 | **0.774** |
