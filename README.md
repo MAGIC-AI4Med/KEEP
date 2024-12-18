@@ -24,15 +24,11 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 ## Quick Start
 
-You could directly download the models from the huggingface as shown below. These models also include functionality to extract patch embeddings for downstream tasks.
+You could directly download the models from google drive with link: [GoogleDrive](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing). These models also include functionality to extract patch embeddings for downstream tasks.
 
 ```python
-from huggingface_hub import login
-from transformers import AutoModel 
-
-login()  # login with your User Access Token, found at https://huggingface.co/settings/tokens
-
-keep = AutoModel.from_pretrained('Astaxanthin/KEEP', trust_remote_code=True)
+cd ./quick_start
+python 
 ```
 
 
