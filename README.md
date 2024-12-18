@@ -28,7 +28,7 @@ You could directly download the models from google drive with link: [GoogleDrive
 
 ```python
 cd ./quick_start
-python 
+python keep_inference.py
 ```
 
 
