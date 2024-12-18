@@ -42,7 +42,7 @@ python evaluation_wsis.py --data_path /path/to/wsi/
 
 
 ## Dataset Structuring
-We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can directly download the fine-tuned Yolov8 model from [Google Drive](https://drive.google.com/drive/my-drive) .
+We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can download the fine-tuned Yolov8 model directly from [PathDetector](https://drive.google.com/drive/my-drive) .
 
 ```bash
 cd data
