@@ -139,14 +139,11 @@ If you find our work useful in your research, please consider citing our [paper]
 
 
 ```
-@misc{zhou2024keep,
-      title={A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis}, 
-      author={Xiao Zhou and Luoyi Sun and Dexuan He and Wenbin Guan and Ruifen Wang and Lifeng Wang and Xin Sun and Kun Sun and Ya Zhang and Yanfeng Wang and Weidi Xie},
-      year={2024},
-      eprint={2412.13126},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV},
-      url={https://arxiv.org/abs/2412.13126}, 
+@article{zhou2024keep,
+  title={A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis},
+  author={Xiao Zhou, Luoyi Sun, Dexuan He, Wenbin Guan, Ruifen Wang, Lifeng Wang, Xin Sun, Kun Sun, Ya Zhang, Yanfeng Wang, Weidi Xie},
+  journal={arXiv preprint arXiv:2412.13126},
+  year={2024}
 }
 ``` 
 
