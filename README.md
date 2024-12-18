@@ -1,4 +1,4 @@
-# KEEP
+# KEEP (**K**nowledg**E**-**E**nhanced **P**athology)
 
 The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"**
 
@@ -12,9 +12,9 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 
 ## News
-**[12/18/2024]**: Code and model weights are now live. 
+**[12/18/2024]**: Model weights for easy inference are now available. 
 
-**[12/18/2024]**: We published the paper on ArXiv(https://arxiv.org/abs/2412.13126)
+**[12/18/2024]**: Paper is available in ArXiv (https://arxiv.org/abs/2412.13126).
 
 
 ## What is KEEP? 
