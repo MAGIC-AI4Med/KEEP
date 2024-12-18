@@ -1,0 +1,51 @@
+DATASET:
+  IMG_DIR: 'Path/to/training/image/folder'
+  TRAIN_DATA: 'Path/to/training/data (.csv)'
+  VAL_DATA: 'Path/to/validation/data (.csv)'
+  ZEROSHOT_CLS_IMDIR: 'Path/to/test (zeroshot classification)/image/folder'
+  ZEROSHOT_CLS: 'Path/to/test (zeroshot classifation)/data (.csv)'
+  ZEROSHOT_CLS_PROMPTS: 'Path/to/test (zeroshot classifation)/prompts (.json)'
+  ZEROSHOT_RET_IMDIR: 'Path/to/test (retrieval)/image/folder'
+  ZEROSHOT_RET: 'Path/to/test (retrieval)/data (.csv)'
+  CSV_SEPARATOR: '\t'
+  CSV_IMG_KEY: 'image_name'
+  CSV_CAPTION_KEY: 'caption'
+  PRELOAD_DATA: False  
+
+MODEL:
+  BERT_PRETRAIN: 'Path/to/PubmedBERT (folder)'
+  KNOWLEDGE_BERT: 'Path/to/knowledgeBERT (.pt)'
+  KNOWLEDGE_DISTILLATION: 'Path/to/knowledgeBERT (.pt)'
+  RESUME: None
+  NAME: 'ViT-B-16'
+  IMAGE_ENCODER: 'biomed'
+  PRETRAINED_IMAGE: 'Path/to/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/'
+  TEXT_EMBED_DIM: 512
+  VISUAL_EMBEDDING_HEAD: True
+  TEXT_EMBEDDING_HEAD: False
+  LOGIT_SCALE: 0.04 
+
+LOSS:
+  WEIGHT: [1.,0.3,0]
+
+DATALOADER:
+  WORKORS: 8
+  BATCH_SIZE: 256
+
+SOLVER:
+  EPOCHS: 15
+  LR_SCHEDULER: 'cosine'
+  FREE_VISUAL_EPOCHS: 3
+  FREE_BERT_EPOCHS: 3
+  FREE_KNOWLEDGE_EPOCHS: 30
+  LR: 1e-5
+  LR_COOLDOWN_END: 1e-7
+  WD: 0.2
+  WARMUP: 6000
+  VAL_FREQUENCY: 20
+  ZEROSHOT_FREQUENCY: 1
+
+SAVE:
+  OUTPUT_IDR: './logs/'
+  NAME: 'KEP-16_Quilt1m' 
+  SAVE_MOST_RECENT: True

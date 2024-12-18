@@ -1,0 +1,51 @@
+DATASET:
+  IMG_DIR: '../dataset/OpenPath_images/' #
+  TRAIN_DATA: '../dataset/OpenPath_train.csv' # #
+  VAL_DATA: '../dataset/OpenPath_val.csv'
+  ZEROSHOT_CLS_IMDIR: '../dataset/test_dataset/Kather/CRC-VAL-HE-7K' #
+  ZEROSHOT_CLS: '../dataset/test_dataset/Kather/Kather_test.csv' #
+  ZEROSHOT_CLS_PROMPTS: '../dataset/test_dataset/Kather/Kather_prompts.json'
+  ZEROSHOT_RET_IMDIR: '../dataset/test_dataset/Arch_pubmed/arch_pubmed_retrieval' #
+  ZEROSHOT_RET: '../dataset/test_dataset/Arch_pubmed/Arch_pubmed_test.csv' #
+  CSV_SEPARATOR: '\t'
+  CSV_IMG_KEY: 'image_name'
+  CSV_CAPTION_KEY: 'caption'
+  PRELOAD_DATA: True 
+
+MODEL:
+  BERT_PRETRAIN: '../pretrained_model/PubmedBERT' 
+  KNOWLEDGE_BERT: '../pretrained_model/KnowledgeBERT/epoch_500.pt' 
+  KNOWLEDGE_DISTILLATION: '../pretrained_model/KnowledgeBERT/epoch_500.pt' 
+  RESUME: None
+  NAME: 'ViT-B-32'
+  IMAGE_ENCODER: 'clip_vit'
+  PRETRAINED_IMAGE:  None
+  TEXT_EMBED_DIM: 512
+  VISUAL_EMBEDDING_HEAD: True
+  TEXT_EMBEDDING_HEAD: False
+  LOGIT_SCALE: 0.04
+
+LOSS:
+  WEIGHT: [1.,0.3,0]
+
+DATALOADER:
+  WORKORS: 8
+  BATCH_SIZE: 256
+
+SOLVER:
+  EPOCHS: 30
+  LR_SCHEDULER: 'cosine'
+  FREE_VISUAL_EPOCHS: 5
+  FREE_BERT_EPOCHS: 5
+  FREE_KNOWLEDGE_EPOCHS: 30
+  LR: 1e-5
+  LR_COOLDOWN_END: 1e-7
+  WD: 0.2
+  WARMUP: 3000
+  VAL_FREQUENCY: 20 
+  ZEROSHOT_FREQUENCY: 1
+
+SAVE:
+  OUTPUT_IDR: './logs/'
+  NAME: 'KEP-32_OpenPath' #
+  SAVE_MOST_RECENT: True
