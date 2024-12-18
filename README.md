@@ -14,7 +14,7 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 ## News
 **[12/18/2024]**: Code and model weights are now live. 
 
-**[12/18/2024]**: We published the paper on ArXiv(https://arxiv.org/abs/2412.18***)
+**[12/18/2024]**: We published the paper on ArXiv(https://arxiv.org/abs/2412.13126)
 
 
 ## What is KEEP? 
@@ -135,19 +135,19 @@ We present benchmark results for a range of representative tasks. A complete set
 The project was built on top of amazing repositories such as [MI-Zero](https://github.com/mahmoodlab/MI-Zero), [CLAM](https://github.com/mahmoodlab/CLAM), [OpenCLIP](https://github.com/mlfoundations/open_clip). We thank the authors and developers for their contribution.
 
 ## Reference
-If you find our work useful in your research, please consider citing our [paper](https://arxiv.org/abs/2412.18***):
+If you find our work useful in your research, please consider citing our [paper](https://arxiv.org/abs/2412.13126):
 
-<!-- 
+
 ```
-@misc{ding2024titan,
-      title={Multimodal Whole Slide Foundation Model for Pathology}, 
-      author={Tong Ding and Sophia J. Wagner and Andrew H. Song and Richard J. Chen and Ming Y. Lu and Andrew Zhang and Anurag J. Vaidya and Guillaume Jaume and Muhammad Shaban and Ahrong Kim and Drew F. K. Williamson and Bowen Chen and Cristina Almagro-Perez and Paul Doucet and Sharifa Sahai and Chengkuan Chen and Daisuke Komura and Akihiro Kawabe and Shumpei Ishikawa and Georg Gerber and Tingying Peng and Long Phi Le and Faisal Mahmood},
+@misc{zhou2024keep,
+      title={A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis}, 
+      author={Xiao Zhou and Luoyi Sun and Dexuan He and Wenbin Guan and Ruifen Wang and Lifeng Wang and Xin Sun and Kun Sun and Ya Zhang and Yanfeng Wang and Weidi Xie},
       year={2024},
-      eprint={2411.19666},
+      eprint={2412.13126},
       archivePrefix={arXiv},
       primaryClass={eess.IV},
-      url={https://arxiv.org/abs/2411.19666}, 
+      url={https://arxiv.org/abs/2412.13126}, 
 }
-``` -->
+``` 
 
 <img src=resources/logo.png> 
