@@ -24,7 +24,7 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 ## Quick Start
 
-You could directly download the models from google drive with link: [GoogleDrive](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing). These models also include functionality to extract patch embeddings for downstream tasks.
+You can directly download the model weights from Google Drive with the link: [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) for easy inference.
 
 ```python
 cd ./quick_start
@@ -47,7 +47,7 @@ We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can d
 ```bash
 cd data
 
-# detection pathology image in slide
+# Detection pathology image in slide
 python detection.py --data_path /path/to/images/ --model_path /path/to/yolov8/
 
 # textual refinement: extract entities, paraphrased by templates
@@ -58,9 +58,9 @@ python data_cluster.py --image_path /path/to/images/ --text_path /path/to/texts/
 ``` 
 
 ## Knowledge Construction and Encoding
-For knowledge graph construction, we download the knowledge structure from  [Disease Ontolog (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
+For knowledge graph construction, we download the knowledge structure from  [Disease Ontology (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
 
-For disease knowledge encoding, we train the knowldge encoder similar with our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You could find more detailed information in the repository. In this part, we use four A100 GPUs.
+For disease knowledge encoding, we train the knowledge encoder in a way similar to our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You can find more detailed information in the repository. In this part, we use four A100 GPUs.
 
 ## Vision-language Pre-training
 
