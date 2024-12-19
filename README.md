@@ -33,11 +33,11 @@ python keep_inference.py
 
 
 ## Evaluation on WSIs 
-We provide a ```.py``` file for fast evaluation on WSIs as follows. You  need to change ```--data_path``` to the path where your WSIs are stored. In this part, you only need one 4090 GPU.
+We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to change ``data path'' in the Python script to the path in your computer. In this part, you only need one 4090 GPU.
 
 ```bash
-cd evaluation
-python evaluation_wsis.py --data_path /path/to/wsi/
+cd WSI_evaluation
+python zeroshot_segment_WSI.py
 ```
 
 
