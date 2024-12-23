@@ -12,6 +12,8 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 
 ## News
+**[12/23/2024]**: Model weights for pathology image detectection are now available. 
+
 **[12/23/2024]**: Codes for WSI evaluation are now available. 
 
 **[12/18/2024]**: Model weights for easy inference are now available. 
@@ -46,7 +48,16 @@ python zeroshot_subtyping_WSI.py
 
 
 ## Dataset Structuring
-We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can download the fine-tuned Yolov8 model directly from [PathDetector](https://drive.google.com/drive/my-drive) .
+We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can download the fine-tuned Yolov8 model directly from [PathDetector](https://drive.google.com/file/d/1CtQdGTrmMokUYaMczW1BsEr2BT8YkHZ2/view?usp=sharing) .
+
+```bash
+from ultralytics import YOLO
+model = YOLO("yolov8x.yaml")  # build a new model from scratch
+model = YOLO("./best.pt")  # load a pretrained model
+img_path = 'example.jpg'
+results = model(img_path)  # detect pathology regions on an image
+```
+
 
 ```bash
 cd data
