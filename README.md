@@ -52,6 +52,7 @@ We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can d
 
 ```bash
 from ultralytics import YOLO
+
 model = YOLO("yolov8x.yaml")  # build a new model from scratch
 model = YOLO("./best.pt")  # load a pretrained model
 img_path = 'example.jpg'
