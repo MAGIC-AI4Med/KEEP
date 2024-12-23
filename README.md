@@ -12,6 +12,8 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 
 ## News
+**[12/23/2024]**: Codes for WSI evaluation are now available. 
+
 **[12/18/2024]**: Model weights for easy inference are now available. 
 
 **[12/18/2024]**: Paper is available in ArXiv (https://arxiv.org/abs/2412.13126).
@@ -38,6 +40,8 @@ We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to 
 ```bash
 cd WSI_evaluation
 python zeroshot_segment_WSI.py
+python zeroshot_detection_WSI.py
+python zeroshot_subtyping_WSI.py
 ```
 
 
