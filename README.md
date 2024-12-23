@@ -62,9 +62,6 @@ results = model(img_path)  # detect pathology regions on an image
 ```bash
 cd data
 
-# Detection pathology image in slide
-python detection.py --data_path /path/to/images/ --model_path /path/to/yolov8/
-
 # textual refinement: extract entities, paraphrased by templates
 python text_processing.py --data_path /path/to/texts/ 
 
@@ -75,7 +72,7 @@ python data_cluster.py --image_path /path/to/images/ --text_path /path/to/texts/
 ## Knowledge Construction and Encoding
 For knowledge graph construction, we download the knowledge structure from  [Disease Ontology (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
 
-For disease knowledge encoding, we train the knowledge encoder in a way similar to our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You can find more detailed information in the repository. In this part, we use four A100 GPUs.
+For disease knowledge encoding, we train the knowledge encoder in a way similar to our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You can find more detailed information in the repository. In this part, we use 4 A100 GPUs.
 
 ## Vision-language Pre-training
 
