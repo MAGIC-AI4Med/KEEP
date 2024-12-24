@@ -30,7 +30,7 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 ## Quick Start
 You can directly load **KEEP** from Huggingface and conduct inference with the following codes:
-```
+```python
 from transformers import AutoModel, AutoTokenizer
 from torchvision import transforms
 from PIL import Image
@@ -58,7 +58,7 @@ text_feature = model.encode_text(token_input)
 
 Alternatively, you can download the model weights from Google Drive with the link: [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) for easy inference.
 
-```python
+```bash
 cd ./quick_start
 python keep_inference.py
 ```
