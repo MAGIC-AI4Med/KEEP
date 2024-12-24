@@ -65,7 +65,7 @@ class KEEPModel(PreTrainedModel):
     def forward(self, image_inputs, text_inputs):
         vision_features = self.encode_image(image_inputs)
         
-        text_features = self.encode_image(text_inputs)
+        text_features = self.encode_text(text_inputs)
 
         return {
             "vision_features": vision_features,  
