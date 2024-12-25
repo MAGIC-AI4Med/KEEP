@@ -134,7 +134,7 @@ python main.py
 
 ## Performance Comparisons with Other Models
 
-We present benchmark results for a range of representative tasks. A complete set of benchmarks can be found in the [paper](https://arxiv.org/abs/2412.18***). These results will be updated with each new iteration of KEEP. 
+We present benchmark results for a range of representative tasks. A complete set of benchmarks can be found in the [paper](https://arxiv.org/abs/2412.13126). These results will be updated with each new iteration of KEEP. 
 
 ### Zero-shot Cancer Region Segmentation (DICE) 
 | Models | PLIP[[1]](https://www.nature.com/articles/s41591-023-02504-3) | QuiltNet [[2]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/775ec578876fa6812c062644964b9870-Abstract-Datasets_and_Benchmarks.html) |   MI-Zero (Pub) [[3]](https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html) | CONCH [[4]](https://www.nature.com/articles/s41591-024-02856-4) | **KEEP(Ours)**  |
