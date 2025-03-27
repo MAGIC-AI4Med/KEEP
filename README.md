@@ -60,7 +60,7 @@ Alternatively, you can download the model weights from Google Drive with the lin
 
 
 ## Evaluation on WSIs 
-We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to change ``data path'' in the Python script to the path in your computer. In this part, you only need one 4090 GPU.
+We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing), In this part, you only need one 4090 GPU.
 
 ```bash
 cd ./WSI_evaluation
