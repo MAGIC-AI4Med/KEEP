@@ -3,7 +3,7 @@ import json
 import torch
 import torch.nn.functional as F
 from tqdm import tqdm
-
+ 
 from path_open_clip import get_input_dtype, get_tokenizer, build_zero_shot_classifier, retrieval_metrics, classification_metrics, \
     IMAGENET_CLASSNAMES, OPENAI_IMAGENET_TEMPLATES
 from .precision import get_autocast
@@ -98,8 +98,12 @@ def zero_shot_eval(model, tokenizer, data, epoch, args, cfg):
             for i, batch in enumerate(data['zeroshot_cls'].dataloader):
                 images, labels = batch
                 images = images.to(device=args.device)
+                
+                if cfg.MODEL.PRECISION == 'bf16':
+                    images = images.to(torch.bfloat16)
+                
                 with autocast():
-                    img_features = model.encode_image(images).detach().cpu().numpy()
+                    img_features = model.encode_image(images).detach().to(torch.float).cpu().numpy()
                     image_embeddings.extend(img_features)
                     label_list.extend(labels)
 
@@ -108,7 +112,8 @@ def zero_shot_eval(model, tokenizer, data, epoch, args, cfg):
             cap_embeddings = dict()
             for type_name,caps in template_captions.items():
                 text_input = contional_tokenize(caps, tokenizer, cfg, args)
-                cap_embeddings[type_name] = model.encode_text(text_input['text_clip'] if isinstance(text_input,dict) else text_input).detach().cpu().numpy()
+                
+                cap_embeddings[type_name] = model.encode_text(text_input['text_clip'] if isinstance(text_input,dict) else text_input).detach().to(torch.float).cpu().numpy()
 
         image_embeddings = np.array(image_embeddings)
         image_embeddings = image_embeddings / np.linalg.norm(image_embeddings, axis=1, keepdims=True)
@@ -157,9 +162,13 @@ def zero_shot_eval(model, tokenizer, data, epoch, args, cfg):
                 else:
                     text_input = tokenizer['clip'](list(texts)).to(device=args.device, non_blocking=True)
                 with autocast():
+                    
+                    if cfg.MODEL.PRECISION == 'bf16':
+                        images = images.to(torch.bfloat16)
+                    
                     model_out = model(images, text_input)
-                    image_features = model_out["image_features"].detach().cpu().numpy()
-                    text_features = model_out["text_features"].detach().cpu().numpy()
+                    image_features = model_out["image_features"].detach().to(torch.float).cpu().numpy()
+                    text_features = model_out["text_features"].detach().to(torch.float).cpu().numpy()
                     image_embeddings.extend(image_features)
                     text_embeddings.extend(text_features)
       
@@ -202,9 +211,13 @@ def zero_shot_eval(model, tokenizer, data, epoch, args, cfg):
                 else:
                     text_input = tokenizer['clip'](list(texts)).to(device=args.device, non_blocking=True)
                 with autocast():
+                    
+                    if cfg.MODEL.PRECISION == 'bf16':
+                        images = images.to(torch.bfloat16)
+                    
                     model_out = model(images, text_input)
-                    image_features = model_out["image_features"].detach().cpu().numpy()
-                    text_features = model_out["text_features"].detach().cpu().numpy()
+                    image_features = model_out["image_features"].detach().to(torch.float).cpu().numpy()
+                    text_features = model_out["text_features"].detach().to(torch.float).cpu().numpy()
                     image_embeddings.extend(image_features)
                     text_embeddings.extend(text_features)
       

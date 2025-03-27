@@ -22,7 +22,7 @@ _C.DATASET.TYPE = 'csv'
 # Training information
 _C.DATASET.TRAIN_DATA = 'Path/to/training/data (.csv)'
 # Validation information
-_C.DATASET.VAL_DATA = 'Path/to/validation/data (.csv)'
+_C.DATASET.VAL_DATA = ''
 # Image address for Zeroshot evaluation 
 _C.DATASET.ZEROSHOT_CLS_IMDIR = 'Path/to/test (zeroshot classification)/image/folder'
 # Zeroshot information 
@@ -47,6 +47,9 @@ _C.DATASET.CSV_CAPTION_KEY = 'caption'
 # Whether preload data
 _C.DATASET.PRELOAD_DATA = False
 
+_C.DATASET.LABEL_CAP = 'both'
+_C.DATASET.KNOWLEDGE_FILE = None
+_C.DATASET.PART_NUM = 0 # for continue learning
 
 # -----------------------------------------------------------------------------
 # DATALODER
@@ -56,6 +59,12 @@ _C.DATALOADER = CN()
 _C.DATALOADER.WORKORS = 8
 # Batch size per GPU
 _C.DATALOADER.BATCH_SIZE = 512
+
+# for denoised VLP
+_C.DATALOADER.CAPTION_NUM = 0
+_C.DATALOADER.SEED = 0
+
+_C.DATALOADER.TEXT_DROP = True
 
 # -----------------------------------------------------------------------------
 # SOLVER
@@ -102,7 +111,7 @@ _C.MODEL.RESUME = None
 _C.MODEL.NAME = 'ViT-B-32'
 # Use a pretrained CLIP model weights with the specified tag or file path. default is None
 
-_C.MODEL.TEXT_ENCODER = 'bert'
+_C.MODEL.TEXT_ENCODER = None
 _C.MODEL.BERT_PRETRAIN = None
 # Use the knowledge encoder weights. defaut is none
 
@@ -118,7 +127,7 @@ _C.MODEL.KNOWLEDGE_GUIDANCE = False
 # Visual guidance
 _C.MODEL.VISUAL_GUIDANCE = False
 # Floating point precision ["amp", "amp_bf16", "amp_bfloat16", "bf16", "fp16", "pure_bf16", "pure_fp16", "fp32"]
-_C.MODEL.PRECISION = 'amp'
+_C.MODEL.PRECISION = 'amp_bf16'  ## 'amp' results in an error when using 'UNI' encoder, so amp_bf16, 'bf16' for prov
 # Gradient clip.
 _C.MODEL.GRAD_CLIP_NORM = None
 
@@ -131,12 +140,18 @@ _C.MODEL.TEXT_EMBEDDING_HEAD = False
 # Logit scale
 _C.MODEL.LOGIT_SCALE = 0.07
 
+_C.MODEL.TYPE = 'VLP'
+
+_C.MODEL.CONTINUE_INIT = None
+
 # -----------------------------------------------------------------------------
 # LOSS
 # -----------------------------------------------------------------------------
 _C.LOSS = CN()
+_C.LOSS.SUBTYPE = None
 # Loss weights for knowledge distillation
-_C.LOSS.WEIGHT = [1.,1.,1.]
+_C.LOSS.WEIGHT = [1.,1.]
+
 
 # -----------------------------------------------------------------------------
 # SAVE

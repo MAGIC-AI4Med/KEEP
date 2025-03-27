@@ -25,12 +25,13 @@ except ImportError:
 
 sys.path.append("./")
 from path_open_clip import create_model_and_transforms, trace_model, get_tokenizer, create_loss
-from path_training.data_proc import get_data, preload_dataset
+# from path_training.data_proc import get_data, preload_dataset
+from path_training.data_proc_group import get_data, preload_dataset
 from path_training.distributed import is_master, init_distributed_device, broadcast_object
 from path_training.logger import setup_logging
 from path_training.params import parse_args
 from path_training.scheduler import cosine_lr, const_lr, const_lr_cooldown
-from path_training.train import train_one_epoch, evaluate
+from path_training.train_hierarchy import train_one_epoch, evaluate
 from path_training.file_utils import pt_load, start_sync_process, remote_sync
 from path_training.config import cfg
 from path_training.freeze_scheduler import FreezeScheduler, FreezeChecker
@@ -40,10 +41,10 @@ LATEST_CHECKPOINT_NAME = "epoch_latest.pt"
 
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
-def random_seed(seed=42, rank=0):
-    torch.manual_seed(seed + rank)
-    np.random.seed(seed + rank)
-    random.seed(seed + rank)
+def random_seed(seed=0):
+    torch.manual_seed(seed)
+    np.random.seed(seed)
+    random.seed(seed)
 
 
 def natural_key(string_):
@@ -66,11 +67,11 @@ def get_latest_checkpoint(path: str, remote : bool):
         return checkpoints[-1]
     return None
 
-
+ 
 def main(input_args):
     parser = argparse.ArgumentParser(description="CLIP Training")
     parser.add_argument(
-        "--config_file", default="./configs/KEP-32_OpenPath_example.yml", help="path to config file", type=str
+        "--config_file", default="./configs/keep_config.yml", help="path to config file", type=str
     )
     init_args = parser.parse_args()
     args = parse_args(input_args)
@@ -79,6 +80,7 @@ def main(input_args):
         cfg.merge_from_file(init_args.config_file)
     # cfg.freeze()
 
+    random_seed(cfg.DATALOADER.SEED)
     if torch.cuda.is_available():
         # This enables tf32 on Ampere GPUs which is only 8% slower than
         # float16 and almost as accurate as float32
@@ -212,11 +214,12 @@ def main(input_args):
         # arg is nargs, single (square) image size list -> int
         args.force_image_size = args.force_image_size[0]
     
-    random_seed(args.seed, 0)
+
     model, preprocess_train, preprocess_val = create_model_and_transforms(
         cfg.MODEL.NAME,
         cfg.MODEL.LOGIT_SCALE,
         cfg.MODEL.TEXT_ENCODER,
+        cfg.MODEL.TEXT_EMBED_DIM,
         cfg.MODEL.BERT_PRETRAIN,
         cfg.MODEL.IMAGE_ENCODER,
         cfg.MODEL.PRETRAINED_IMAGE,
@@ -233,7 +236,6 @@ def main(input_args):
         output_dict=True,
     )
 
-    random_seed(args.seed, 0)
     if args.trace:
         model = trace_model(model, batch_size=cfg.DATALOADER.BATCH_SIZE, device=device)
 
@@ -341,15 +343,15 @@ def main(input_args):
     if 'train' in data and optimizer is not None:
         total_steps = (data["train"].dataloader.num_batches // cfg.SOLVER.ACCUM_FREQ) * cfg.SOLVER.EPOCHS
         if cfg.SOLVER.LR_SCHEDULER == "cosine":
-            scheduler = cosine_lr(optimizer, cfg.SOLVER.LR, cfg.SOLVER.WARMUP, total_steps)
+            scheduler = cosine_lr(optimizer, cfg.SOLVER.LR, total_steps//cfg.SOLVER.EPOCHS, total_steps)
         elif cfg.SOLVER.LR_SCHEDULER == "const":
-            scheduler = const_lr(optimizer, cfg.SOLVER.LR, cfg.SOLVER.WARMUP, total_steps)
+            scheduler = const_lr(optimizer, cfg.SOLVER.LR, total_steps//cfg.SOLVER.EPOCHS, total_steps)
         elif cfg.SOLVER.LR_SCHEDULER == "const-cooldown":
             assert cfg.SOLVER.EPOCHS_COOLDOWN is not None,\
                 "Please specify the number of cooldown epochs for this lr schedule."
             cooldown_steps = (data["train"].dataloader.num_batches // cfg.SOLVER.ACCUM_FREQ) * cfg.SOLVER.EPOCHS_COOLDOWN
             scheduler = const_lr_cooldown(
-                optimizer, cfg.SOLVER.LR, cfg.SOLVER.WARMUP, total_steps,
+                optimizer, cfg.SOLVER.LR, total_steps//cfg.SOLVER.EPOCHS, total_steps,
                 cooldown_steps, cfg.SOLVER.SOLVER.LR_COOLDOWN_POWER, cfg.SOLVER.LR_COOLDOWN_END)
         else:
             logging.error(
@@ -416,6 +418,8 @@ def main(input_args):
         ## check state of model layers
         freezechecker = FreezeChecker(model)
         
+        if cfg.DATASET.TYPE == 'json':
+            data['train'].dataset.shuffle_data()
         train_one_epoch(model, data, tokenizer, loss, epoch, optimizer, scaler, scheduler, args, cfg, tb_writer=writer)
         completed_epoch = epoch + 1
 

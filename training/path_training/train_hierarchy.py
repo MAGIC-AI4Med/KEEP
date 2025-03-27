@@ -3,20 +3,35 @@ import logging
 import math
 import os
 import time
+
 import numpy as np
 import torch
 import torch.nn.functional as F
+from torch.nn.parallel.distributed import DistributedDataParallel
+
 try:
     import wandb
 except ImportError:
     wandb = None
 
-from path_open_clip import get_input_dtype
+from path_open_clip import get_input_dtype, CLIP, CustomTextCLIP
 from .distributed import is_master
 from .zero_shot import zero_shot_eval
 from .precision import get_autocast
-from path_open_clip.tokenizer import tokenize
 
+from path_open_clip.tokenizer import tokenize
+import random
+from path_training.data_proc_group import get_hierarchy_cap
+import copy
+
+sub_disease_nodes = {'DOID:0050117':'disease by infectious agent',
+                  'DOID:7':'disease of anatomical entity',
+                  'DOID:14566':'disease of cellular proliferation',
+                  'DOID:150':'disease of mental health',
+                  'DOID:0014667':'disease of metabolism',
+                  'DOID:630':'genetic disease',
+                  'DOID:0080015':'physical disorder',
+                  'DOID:225':'syndrome'}
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""
@@ -49,30 +64,68 @@ def unwrap_model(model):
     else:
         return model
 
-
 def backward(total_loss, scaler):
-    if scaler is not None:
+    if scaler is not None:  
         scaler.scale(total_loss).backward()
     else:
         total_loss.backward()
+        
+def generate_negative_text(knowledge_root, label_node, N_ins, N_neg):
+    
+    with open(knowledge_root) as f:
+        all_do_nodes = json.load(f)
+    # node_graph = dict()
+    # for kk,vv in all_do_nodes.items():
+    #     node_graph[kk] = vv['parent']
+        
+    unique_node = label_node[::N_ins]
+    
+    negative_text = []
+    for node in unique_node:
+        
+        if node not in all_do_nodes:
+            negative_text.extend(['unknown']*N_neg)
+            continue
+        
+        if 'parent' not in all_do_nodes[node]:
+            negative_text.extend(['unknown']*N_neg)
+            continue
+        
+        parent_node = all_do_nodes[node]['parent']
+        neg_children_nodes = []
+        for par_node in parent_node:
+            c_node = copy.deepcopy(all_do_nodes[par_node]['children'])
+            if node not in c_node:
+                print('node: ', node)
+                print('par_node: ', c_node)
+            c_node.remove(node)
+            neg_children_nodes.extend(c_node)
+            
+        if len(neg_children_nodes) == 0:
+            negative_text.extend(['unknown']*N_neg)
+            continue
 
-def text2label(text):
-    label_count = 0
-    text_label = dict()
-    labels = []
-    for ins in list(text):
-        if ins not in text_label:
-            text_label[ins] = label_count
-            label_count += 1
-        labels.append(text_label[ins])
-    return labels
-
-def train_one_epoch(model, data, tokenizer, loss, epoch, optimizer, scaler, scheduler, args, cfg, tb_writer=None, dist_model = None):
+        random.shuffle(neg_children_nodes)
+        if len(neg_children_nodes) > N_neg:
+            select_children = neg_children_nodes[:N_neg]
+        else:
+            select_children = random.choices(neg_children_nodes, k=N_neg)
+        
+        for child in select_children:
+            negative_text.append(get_hierarchy_cap(all_do_nodes,sub_disease_nodes,child, use_syn = True, mixed = True))
+        
+    return negative_text
+    
+        
+def train_one_epoch(model, data, tokenizer, loss, epoch, optimizer, scaler, scheduler, args, cfg, tb_writer=None):
     device = torch.device(args.device)
     autocast = get_autocast(cfg.MODEL.PRECISION)
     input_dtype = get_input_dtype(cfg.MODEL.PRECISION)
 
+
     model.train()
+    # if args.distill:
+    #     dist_model.eval()
 
     data['train'].set_epoch(epoch)  # set epoch in process safe manner via sampler or shared_epoch
     dataloader = data['train'].dataloader
@@ -87,37 +140,60 @@ def train_one_epoch(model, data, tokenizer, loss, epoch, optimizer, scaler, sche
     data_time_m = AverageMeter()
     end = time.time()
     for i, batch in enumerate(dataloader):
+        # logging.info(len(batch))
         i_accum = i // cfg.SOLVER.ACCUM_FREQ
         step = num_batches_per_epoch * epoch + i_accum
 
         if not args.skip_scheduler:
             scheduler(step)
 
-        images, texts = batch
+        if cfg.DATASET.KNOWLEDGE_FILE:
+            images, texts, cap_label = batch
+            
+            ## additional neg
+            # N_ins = cfg.DATALOADER.BATCH_SIZE // cfg.DATALOADER.CAPTION_NUM
+            # N_neg = N_ins
+            # neg_texts = generate_negative_text(cfg.DATASET.KNOWLEDGE_FILE, cap_label, N_ins, N_neg)
+            # texts = [item for item in texts] + neg_texts
+        else:
+            images, texts = batch
+
         images = images.to(device=device, dtype=input_dtype, non_blocking=True)
         
-        text_labels = text2label(texts)
+        # text_labels = text2label(texts)
 
-        text_input = dict()
-        if cfg.MODEL.TEXT_ENCODER == 'bert':
+        if cfg.MODEL.KNOWLEDGE_GUIDANCE:
+            text_input = dict()
+            if cfg.MODEL.TEXT_ENCODER == 'bert':
+                text_input['text_clip'] = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
+            elif cfg.MODEL.TEXT_ENCODER in ['clip','biomed']:
+                text_input['text_clip'] = tokenizer['clip'](texts).to(device=device, non_blocking=True)
+            text_input['text_knowledge'] = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
+        elif cfg.MODEL.BERT_PRETRAIN is not None:
             text_input = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
-            # text_input['text_knowledge'] = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
+        elif cfg.MODEL.PRETRAINED_IMAGE == 'biomed':
+            text_input = tokenizer['biomed'](list(texts), context_length=256).to(device)
         else:
             text_input = tokenizer['clip'](texts).to(device=device, non_blocking=True)
-            ## add the tokenizer for other text encoder here
-            # pass
-        
+
         data_time_m.update(time.time() - end)
         optimizer.zero_grad()
+        
+        loss_weight = None
+        if cfg.MODEL.KNOWLEDGE_GUIDANCE and cfg.LOSS.ADAPTIVE:
+            loss_weight = float(epoch)/float(cfg.SOLVER.EPOCHS)*cfg.LOSS.WEIGHT[1]
 
         if cfg.SOLVER.ACCUM_FREQ == 1:
             with autocast():
-                model_out = model(images, text_input)
-                logit_scale = model_out["logit_scale"]
-                # print(model_out)
                 
-                losses = loss(**model_out, output_dict=True)
-
+                img_feat = model.encode_image(images)
+                text_feat = model.encode_text(text_input)
+                logit_scale = model.logit_scale.exp()
+                if cfg.DATASET.KNOWLEDGE_FILE and cfg.MODEL.TYPE == 'hierarchy_metric':
+                    losses = loss(img_feat, text_feat, cap_label, logit_scale, output_dict=True)
+                else:
+                    losses = loss(img_feat, text_feat, logit_scale, output_dict=True)
+                    
                 total_loss = sum(losses.values())
                 losses["loss"] = total_loss
 
@@ -273,16 +349,18 @@ def evaluate(model, data, tokenizer, epoch, args, cfg, tb_writer=None):
             for i, batch in enumerate(dataloader):
                 images, texts = batch
                 images = images.to(device=device, dtype=input_dtype, non_blocking=True)
-                text_input = dict()
-                
-                if cfg.MODEL.TEXT_ENCODER == 'bert':
-                    text_input['text_clip'] = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
+                if cfg.MODEL.KNOWLEDGE_GUIDANCE:
+                    text_input = dict()
+                    if cfg.MODEL.TEXT_ENCODER == 'bert':
+                        text_input['text_clip'] = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
+                    elif cfg.MODEL.TEXT_ENCODER in ['clip','biomed']:
+                        text_input['text_clip'] = tokenizer['clip'](texts).to(device=device, non_blocking=True)
                     text_input['text_knowledge'] = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
+                elif cfg.MODEL.BERT_PRETRAIN is not None:
+                    text_input = tokenizer['bert'](list(texts),add_special_tokens=True,max_length=256,pad_to_max_length=True,return_tensors='pt').to(device=device)
                 else:
-                    text_input = tokenizer['clip'](texts).to(device=device, non_blocking=True)
-                    ## add the tokenizer for other text encoder here
-                    # pass
-                
+                    text_input = tokenizer['clip'](list(texts)).to(device=device, non_blocking=True)
+
                 with autocast():
                     model_out = model(images, text_input)
                     image_features = model_out["image_features"]

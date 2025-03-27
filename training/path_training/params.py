@@ -31,6 +31,7 @@ class ParseKwargs(argparse.Action):
 
 
 def parse_args(args):
+# def parse_args(args):
     parser = argparse.ArgumentParser()
     # parser.add_argument(
     #     "--freeze-bert-epochs",
@@ -501,6 +502,12 @@ def parse_args(args):
         help='Replace the network linear layers from the bitsandbytes library. '
         'Allows int8 training/inference, etc.'
     )
+    # parser.add_argument("--config-file", default="/mnt/hwfile/medai/sunluoyi/pathology/code/S2_knowledge_enhanced_pretraining/configs/KEP-group-cfg.yml", help="path to config file", type=str)
+    # parser.add_argument("--train_data", default="/mnt/hwfile/medai/zhouxiao/data/pathology/training_datasets/group_resnet_2nd_stage.json", type=str)
+    # parser.add_argument("--batch_size", type=int, default=256, help="256 or 128")
+    # parser.add_argument("--caption_num", type=int, default=64, help="64 or 32")
+    # parser.add_argument("--name", default='test', help="name of log dir")
+    # args = parser.parse_args()
     args = parser.parse_args(args)
 
     # If some params are not passed, we use the default values based on model name.
