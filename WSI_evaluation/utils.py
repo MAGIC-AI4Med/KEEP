@@ -5,6 +5,7 @@ import os
 import h5py
 from tqdm import tqdm
 import random
+from torch.utils.data import Dataset
 
 
 class WSI_Classification_Dataset(Dataset):
@@ -69,8 +70,8 @@ def zero_shot_classifier(KEEP_model, classnames, templates, device):
             elif isinstance(templates, str):
                 texts = [templates.replace('CLASSNAME', classname)]
                 
-            text_inputs = KEEP_model.tokenizer(texts,max_length=256,padding='max_length',truncation=True, return_tensors='pt').to(device)    
-            class_embeddings = KEEP_model.model.encode_text(text_inputs)[0]
+            text_inputs = KEEP_model['tokenizer'](texts,max_length=256,padding='max_length',truncation=True, return_tensors='pt').to(device)    
+            class_embeddings = KEEP_model['model'].encode_text(text_inputs)[0]
             
             if len(class_embeddings.shape) == 1:
                 class_embeddings = class_embeddings.unsqueeze(0)
@@ -82,16 +83,21 @@ def zero_shot_classifier(KEEP_model, classnames, templates, device):
         zeroshot_weights = torch.stack(zeroshot_weights, dim=1).to(device)
     return zeroshot_weights
 
-def get_zeroshot_classifier(model, dataloader, prompts, device):
+def get_zeroshot_classifier(model, label_map, prompts, device, add_normal = False):
     
     classnames = prompts['classnames']
     templates = prompts['templates']
 
-    idx_to_class = {v:k for k,v in dataloader.dataset.label_map.items()}
+    idx_to_class = {v:k for k,v in label_map.items()}
     
     n_classes = len(idx_to_class)
     
-    classnames_text = [classnames[idx_to_class[idx]] for idx in range(n_classes)]
+    if add_normal:
+        idx_to_class[n_classes] = 'Normal'
+        n_classes = len(idx_to_class)
+        classnames_text = [classnames[idx_to_class[idx]] for idx in range(n_classes)]
+    else:
+        classnames_text = [classnames[idx_to_class[idx]] for idx in range(n_classes)]
 
     classifier = zero_shot_classifier(model, classnames_text, templates, device) # num_classes x feat_dim
     
@@ -110,48 +116,25 @@ def rank_cls_score(logits):
         
     return cls_score.item()
 
-def zero_shot_prompt_select(classifiers, dataloader, topn, device):
+def zero_shot_prompt_select(classifiers, tile_features, topn, device):
     
+    preds_all_info = dict()    
+    image_features = tile_features.to(device, non_blocking=True).squeeze(0)
     preds_all_info = dict()
-    print('Step 1. Computing logits and rank score for each classifier...')
-        
-    for idx, data in tqdm(enumerate(dataloader)): # batch size is always 1 WSI,             
-        # if idx >1:
-        #     break
-        image_features = data['features'].to(device, non_blocking=True).squeeze(0)
-        target = data['label'].to(device, non_blocking=True)
-        coords = data['coords']
-        if not isinstance(coords, list):
-            coords = coords.squeeze(0).numpy()
-        slide_id = dataloader.dataset.get_ids(idx)
-        
-        preds_all_info[slide_id] = dict()
-        preds_all_info[slide_id]['coords'] = coords
-        preds_all_info[slide_id]['preds'] = dict()
 
-        image_features = F.normalize(image_features, dim=-1) 
-        
-        for k,cls in enumerate(classifiers):
-            logits = image_features @ cls
-            preds_all_info[slide_id]['preds'][str(k)] = dict()
-            preds_all_info[slide_id]['preds'][str(k)]['cls_score'] = rank_cls_score(logits)
+    image_features = F.normalize(image_features, dim=-1) 
+    
+    for k,cls in enumerate(classifiers):
+        logits = image_features @ cls
+        preds_all_info[str(k)] = dict()
+        preds_all_info[str(k)]['cls_score'] = rank_cls_score(logits)
 
     ## compute score for each text prompt classifier
-    cls_diversity_score = []
-    for k,cls in enumerate(classifiers):
-        cls_diversity = []
-        for i in range(cls.shape[1]):
-            for j in range(i+1,cls.shape[1]):
-                cls_diversity.append((cls[:,i] @ cls[:,j]).item())
-                cls_score = np.array(cls_diversity).mean()
-        cls_diversity_score.append(abs(cls_score))
     
     prompt_classifier_score = []
     for k,cls in enumerate(classifiers):
-        each_classifer_score = []
-        for slide_id, v in preds_all_info.items():
-            each_classifer_score.append(preds_all_info[slide_id]['preds'][str(k)]['cls_score'])
-        prompt_classifier_score.append(np.array(each_classifer_score).mean()) ## no diversity
+        each_classifer_score = preds_all_info[str(k)]['cls_score']
+        prompt_classifier_score.append(each_classifer_score)
 
     sorted_score, index = torch.sort(torch.tensor(prompt_classifier_score),descending=True)
     

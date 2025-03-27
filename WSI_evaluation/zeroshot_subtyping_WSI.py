@@ -1,98 +1,80 @@
 from tqdm import tqdm
 import json
-from utils import get_zeroshot_classifier, WSI_Classification_Dataset, zero_shot_prompt_select
-import pandas as pd
-from torch.utils.data import DataLoader
-from load_keep import load_model
+from utils import get_zeroshot_classifier, zero_shot_prompt_select
 from subtyping_utils import zero_shot_subtyping
-import numpy as np
+from transformers import  AutoModel, AutoTokenizer
+from torchvision import transforms
+import h5py
+import torch
+import torch.nn.functional as F
+import random
 
-label_dicts = {
-    'NSCLC_subtyping': {'LUAD': 0, 'LUSC': 1},
-    'BRCA_subtyping': {'IDC': 0, 'ILC': 1},
-    'RCC_subtyping': {'CHRCC': 0, 'CCRCC': 1, 'PRCC': 2},
-    'ESCA_subtyping': {'Adenocarcinoma, NOS': 0, 'Squamous cell carcinoma, NOS': 1},
-    'Brain_subtyping': {'Glioblastoma': 0, 'Astrocytoma, NOS': 1, 'Oligodendroglioma, NOS': 2},
-    'UBC_subtyping': {'CC': 0, 'EC': 1, 'HGSC': 2, 'LGSC': 3, 'MC': 4},
-    'CPTAC_LUNG_subtyping': {'LUAD': 0, 'LUSC': 1},
-    'ebrains_subtyping': {'Glioblastoma, IDH-wildtype': 0,
-                      'Transitional meningioma':1,
-                      'Anaplastic meningioma':2,
-                      'Pituitary adenoma':3,
-                      'Oligodendroglioma, IDH-mutant and 1p/19q codeleted':4,
-                      'Haemangioma':5,
-                      'Ganglioglioma':6,
-                      'Schwannoma':7,
-                      'Anaplastic oligodendroglioma, IDH-mutant, 1p/19q codeleted':8,
-                      'Anaplastic astrocytoma, IDH-wildtype':9,
-                      'Pilocytic astrocytoma':10,
-                      'Angiomatous meningioma':11,
-                      'Haemangioblastoma':12,
-                      'Gliosarcoma':13,
-                      'Adamantinomatous craniopharyngioma':14,
-                      'Anaplastic astrocytoma, IDH-mutant':15,
-                      'Ependymoma':16,
-                      'Anaplastic ependymoma':17,
-                      'Glioblastoma, IDH-mutant':18,
-                      'Atypical meningioma':19,
-                      'Metastatic tumours':20,
-                      'Meningothelial meningioma':21,
-                      'Langerhans cell histiocytosis':22,
-                      'Diffuse large B-cell lymphoma of the CNS':23,
-                      'Diffuse astrocytoma, IDH-mutant':24,
-                      'Secretory meningioma':25,
-                      'Haemangiopericytoma':26,
-                      'Fibrous meningioma':27,
-                      'Lipoma':28,
-                      'Medulloblastoma, non-WNT/non-SHH':29},
-}
 
-prompt_file = '/Path/to/promt_file/'
-csv_path = '/Path/to/test.csv'
-embeddings_dir = '/Path/to/embedding/'
-model_path = 'Path/to/model/'
-save_dir = 'Path/to/save_dir/'
+test_data_name = 'RCC'
+
+prompt_file = './prompts/tcga_rcc_prompts.json'
+h5_path = './h5_files/TCGA-RCC_examples/TCGA-BP-4161-01Z-00-DX1.a5c24186-a438-4c65-857e-d6da30340342.h5' # CCRCC
+## TCGA-BP-4161-01Z-00-DX1.a5c24186-a438-4c65-857e-d6da30340342 CCRCC
+## TCGA-KN-8425-01Z-00-DX1.1D2AB7D2-6AC3-4785-9FBC-40AEED5DE558 CHRCC
+## TCGA-A4-7915-01Z-00-DX1.856b7fe5-bb58-48a4-a967-52d4e947a814 PRCC
+
+
+model_path = 'Astaxanthin/KEEP' #'/path/to/keep/'
 topn = 50
 bootstrapping = 1000
-
-
-df = pd.read_csv(csv_path) # Load split csv
+ 
 device = 'cuda:0'
-use_h5 = True
-task = 'camelyon_tumor_segment'
-workers = 8
+wsi_label = {'CHRCC': 0, 'CCRCC': 1, 'PRCC': 2}
+id_label = {0:'CHRCC', 1:'CCRCC', 2:'PRCC'}
+prompt_screening = True
 
 with open(prompt_file, 'r') as pf: 
     prompts = json.load(pf)
 
-## dataset
-dataset = WSI_Classification_Dataset(
-        df = df,
-        data_source = embeddings_dir, 
-        target_transform = None,
-        index_col = 'slide_id',
-        target_col = 'Diagnosis', 
-        use_h5 = use_h5, 
-        label_map = label_dicts[task]
-    )
-test_dataloader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers= workers, pin_memory=True)
+
+with open(prompt_file, 'r') as pf: 
+    prompts = json.load(pf)
+
+with h5py.File(h5_path, 'r') as f:
+    tile_features = torch.from_numpy(f['features'][:]).to(device)
+    tile_coords = f['coords'][:]
 
 ## load model
-KEEP_model = load_model(model_path)
+KEEP_model = dict()
+model = AutoModel.from_pretrained(model_path, trust_remote_code=True).to(device)
+model.eval()
+tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+transform = transforms.Compose([
+    transforms.Resize(size=224, interpolation=transforms.InterpolationMode.BICUBIC),
+    transforms.CenterCrop(size=(224, 224)),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
+])
+KEEP_model['model'] = model
+KEEP_model['tokenizer'] = tokenizer
+KEEP_model['transform'] = transform
 
 ## generate prompt classifier
 merge_classifier = []
 for prompt_idx in (pbar := tqdm(range(len(prompts)))):
     prompt = prompts[str(prompt_idx)]
-    classifier = get_zeroshot_classifier(KEEP_model, test_dataloader, prompts, device)
+    classifier = get_zeroshot_classifier(KEEP_model, wsi_label, prompt, device, add_normal=True)
     merge_classifier.append(classifier)
 
 ## select prompt classifier
-ensemble_classifier = zero_shot_prompt_select(merge_classifier, test_dataloader, topn = topn, device = device)
+if prompt_screening:
+    print('Rank prompts...')
+    ensemble_classifier = zero_shot_prompt_select(merge_classifier, tile_features, topn = topn, device = device)
+else:
+    ensemble_cls = torch.zeros_like(classifier)
+    cter = 0
+    while cter < topn:
+        random.seed(cter)
+        rand_id = random.randint(0,len(merge_classifier)-1)
+        ensemble_cls += merge_classifier[rand_id]
+        cter += 1
+    ensemble_classifier = F.normalize(ensemble_cls, p=2, dim=0)
 
-ensemble_results = zero_shot_subtyping(ensemble_classifier, test_dataloader, csv_path = csv_path, bootstrapping=bootstrapping, device=device, save_dir = save_dir)
+subtyping_preds = zero_shot_subtyping(ensemble_classifier, tile_features, tile_coords, patch_size = 256,  overlap = True)
 
-wf1_res = np.percentile(ensemble_results['wF1'], (2.5, 50, 97.5), interpolation='midpoint')
-print('Zero-shot: median wF1 (2.5, 97.5) is %.3f (%.3f, %.3f). '%(wf1_res[1],wf1_res[0],wf1_res[2]))
-bacc_res = np.percentile(ensemble_results['bacc'], (2.5, 50, 97.5), interpolation='midpoint')
-print('Zero-shot: median bacc (2.5, 97.5) is %.3f (%.3f, %.3f). '%(bacc_res[1],bacc_res[0],bacc_res[2]))
+print('Predicted subtype: ' + id_label[subtyping_preds.item()])

@@ -1,7 +1,7 @@
 from tqdm import tqdm
 import json
 from utils import get_zeroshot_classifier, zero_shot_prompt_select
-from detection_utils import zero_shot_detection
+from segment_utils import zero_shot_segment
 from transformers import  AutoModel, AutoTokenizer
 from torchvision import transforms
 import h5py
@@ -10,16 +10,15 @@ import torch.nn.functional as F
 import random
 
 
-prompt_file = './prompts/cptac_cm_prompts.json'
-h5_path = './h5_files/CPTAC-CM_examples/C3N-02373-22.h5'
-## C3N-02373-22 tumor WSI
-## C3L-00967-27 normal WSI
+test_data_name = 'camelyon_tumor'
 
+prompt_file = './prompts/other_camelyon_tumor_prompts.json'
+h5_path = './h5_files/camelyon_examples/test_040.h5'
 model_path = 'Astaxanthin/KEEP' #'/path/to/keep/'
+mask_path = './h5_files/camelyon_examples/test_040_mask.tif' 
 topn = 50
 
 device = 'cuda:0'
-threshold= 0.5
 wsi_label = {'Normal': 0,'Tumor': 1}
 prompt_screening = True
 
@@ -65,7 +64,8 @@ else:
         ensemble_cls += merge_classifier[rand_id]
         cter += 1
     ensemble_classifier = F.normalize(ensemble_cls, p=2, dim=0)
-    
-detection_preds = zero_shot_detection(ensemble_classifier, tile_features, tile_coords, patch_size = 256, overlap = False) 
 
-print('Tumor probability: %.4f'%(detection_preds))
+## zero-shot evaluation
+auc, dice = zero_shot_segment(ensemble_classifier, tile_features, tile_coords, mask_path, patch_size = 224, overlap = True)
+
+print('AUROC: %.4f, Dice: %.4f'%(auc, dice))
