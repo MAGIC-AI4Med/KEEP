@@ -1,0 +1,56 @@
+DATASET:
+  IMG_DIR: 'Path/to/image/dir' 
+  TRAIN_DATA: 'Path/to/semantic/groups/.json'
+  TYPE: 'json'
+  KNOWLEDGE_FILE: 'Path/to/knowledge_graph.json' 
+  ZEROSHOT_CLS_IMDIR: 'Path/to/evaluation/cls_dataset/'
+  ZEROSHOT_CLS: 'Path/to/evaluation/cls_dataset/data_info.csv'
+  ZEROSHOT_CLS_PROMPTS: 'Path/to/evaluation/cls_dataset/data_prompts.json'
+  ZEROSHOT_RET_IMDIR: 'Path/to/evaluation/retrieval_datasets/'
+  ZEROSHOT_RET: 'Path/to/evaluation/retrieval_datasets/retrieval.csv'
+  PRELOAD_DATA: False 
+  LABEL_CAP: 'both'
+
+MODEL:
+  BERT_PRETRAIN: 'Path/to/bert/pretrain/model/'
+  KNOWLEDGE_BERT: 'Path/to/knowledge/encoder/*.pt'
+  KNOWLEDGE_DISTILLATION: None 
+  RESUME: None
+  NAME: 'ViT-L-16'
+  IMAGE_ENCODER: 'uni'
+  PRETRAINED_IMAGE: 'Path/to/visual/encoder/initialization/'
+  TEXT_EMBED_DIM: 768
+  VISUAL_EMBEDDING_HEAD: True
+  TEXT_EMBEDDING_HEAD: False
+  LOGIT_SCALE: 0.04
+  TEXT_ENCODER: 'bert'
+
+  TYPE: 'hierarchy_metric'
+  PRECISION: 'amp_bf16'
+
+LOSS:
+  SUBTYPE: 'lhp-hn'
+
+DATALOADER:
+  WORKORS: 8
+
+  CAPTION_NUM: 32
+  BATCH_SIZE: 128
+  SEED: 0
+  TEXT_DROP: True
+
+SOLVER:
+  EPOCHS: 10
+  LR_SCHEDULER: 'cosine'
+  FREE_VISUAL_EPOCHS: 1
+  FREE_BERT_EPOCHS: 1
+  LR: 1e-5
+  LR_COOLDOWN_END: 1e-7
+  WD: 0.2
+  VAL_FREQUENCY: 100  
+  ZEROSHOT_FREQUENCY: 1
+
+SAVE:
+  OUTPUT_IDR: 'Path/to/saving/logs/'
+  NAME: 'save_name' #'
+  SAVE_MOST_RECENT: True
