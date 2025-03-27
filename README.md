@@ -12,6 +12,8 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 
 ## News
+**[03/27/2025]**: Codes for single WSI inference on different tasks are now available on [Huggingface](https://huggingface.co/Astaxanthin/KEEP). 
+
 **[12/24/2024]**: Model weights for easy inference are now available on [Huggingface](https://huggingface.co/Astaxanthin/KEEP). 
 
 **[12/23/2024]**: Model weights for pathology image detection are now available. 
@@ -60,7 +62,7 @@ Alternatively, you can download the model weights from Google Drive with the lin
 
 
 ## Evaluation on WSIs 
-We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing), In this part, you only need one 4090 GPU.
+We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) and put the folder "h5_files" in "WSI_evaluation". In this part, you only need one 4090 GPU.
 
 ```bash
 cd ./WSI_evaluation
