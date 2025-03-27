@@ -85,16 +85,6 @@ results = model(img_path)  # detect pathology regions on an image
 ```
 
 
-```bash
-cd data
-
-# textual refinement: extract entities, paraphrased by templates
-python text_processing.py --data_path /path/to/texts/ 
-
-# image-text data cluster
-python data_cluster.py --image_path /path/to/images/ --text_path /path/to/texts/ --structured_data_path /path/to/save/
-``` 
-
 ## Knowledge Construction and Encoding
 For knowledge graph construction, we download the knowledge structure from  [Disease Ontology (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**.
 
