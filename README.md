@@ -64,7 +64,7 @@ We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to 
 
 ```bash
 cd ./WSI_evaluation
-python zeroshot_segment_WSI.py
+python zeroshot_segmentation_WSI.py
 python zeroshot_detection_WSI.py
 python zeroshot_subtyping_WSI.py
 ```
