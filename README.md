@@ -93,19 +93,12 @@ For disease knowledge encoding, we train the knowledge encoder in a way similar 
 ## Vision-language Pre-training
 
 ### Installation
-Start by cloning the repository and cd into the directory:
 
-```bash
-git clone https://github.com/MAGIC-AI4Med/KEEP.git
-cd KEEP
-```
-
-Next, create a conda environment and install the dependencies:
+create a conda environment and install the dependencies:
 
 ```bash
 conda create -n keep python=3.8 -y
 conda activate keep
-pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
@@ -116,12 +109,7 @@ If you need to retrain the model, you could refer to the following code and modi
 cd training
 
 CUDA_VISIBLE_DEVICES=0
-python main.py 
-      --data-path /path/to/data/
-      --save-path /path/to/save/
-      --num-workers 8
-      --batch-size 512
-      --warmup 1000
+python -m path_training.main
 ```
 
 ## Performance Comparisons with Other Models
