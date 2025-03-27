@@ -1,0 +1,4622 @@
+{
+  "0": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "1": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "2": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "3": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "4": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "5": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "6": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "7": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "8": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "9": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "10": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "11": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "12": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "13": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "14": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "15": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "16": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "17": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "18": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "19": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "20": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "21": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "22": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "23": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "24": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "25": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "26": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "27": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "28": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "29": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME."
+  },
+  "30": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "31": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "32": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "33": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "34": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "35": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "36": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "37": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "38": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "39": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "40": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "41": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "42": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "43": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "44": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "45": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "46": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "47": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "48": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "49": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "50": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "51": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "52": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "53": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "54": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "55": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "56": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "57": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "58": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "59": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph showing CLASSNAME."
+  },
+  "60": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "61": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "62": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "63": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "64": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "65": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "66": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "67": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "68": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "69": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "70": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "71": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "72": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "73": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "74": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "75": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "76": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "77": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "78": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "79": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "80": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "81": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "82": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "83": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "84": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "85": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "86": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "87": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "88": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "89": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a photomicrograph of CLASSNAME."
+  },
+  "90": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "91": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "92": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "93": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "94": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "95": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "96": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "97": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "98": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "99": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "100": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "101": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "102": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "103": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "104": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "105": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "106": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "107": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "108": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "109": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "110": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "111": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "112": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "113": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "114": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "115": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "116": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "117": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "118": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "119": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image of CLASSNAME."
+  },
+  "120": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "121": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "122": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "123": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "124": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "125": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "126": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "127": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "128": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "129": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "130": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "131": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "132": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "133": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "134": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "135": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "136": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "137": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "138": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "139": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "140": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "141": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "142": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "143": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "144": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "145": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "146": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "147": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "148": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "149": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an image showing CLASSNAME."
+  },
+  "150": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "151": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "152": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "153": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "154": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "155": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "156": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "157": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "158": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "159": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "160": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "161": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "162": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "163": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "164": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "165": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "166": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "167": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "168": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "169": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "170": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "171": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "172": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "173": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "174": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "175": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "176": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "177": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "178": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "179": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an example of CLASSNAME."
+  },
+  "180": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "181": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "182": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "183": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "184": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "185": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "186": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "187": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "188": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "189": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "190": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "191": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "192": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "193": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "194": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "195": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "196": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "197": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "198": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "199": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "200": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "201": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "202": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "203": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "204": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "205": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "206": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "207": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "208": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "209": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is shown."
+  },
+  "210": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "211": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "212": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "213": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "214": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "215": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "216": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "217": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "218": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "219": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "220": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "221": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "222": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "223": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "224": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "225": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "226": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "227": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "228": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "229": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "230": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "231": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "232": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "233": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "234": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "235": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "236": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "237": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "238": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "239": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "this is CLASSNAME."
+  },
+  "240": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "241": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "242": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "243": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "244": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "245": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "246": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "247": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "248": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "249": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "250": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "251": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "252": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "253": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "254": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "255": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "256": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "257": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "258": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "259": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "260": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "261": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "262": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "263": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "264": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "265": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "266": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "267": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "268": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "269": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "there is CLASSNAME."
+  },
+  "270": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "271": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "272": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "273": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "274": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "275": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "276": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "277": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "278": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "279": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "280": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "281": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "282": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "283": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "284": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "285": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "286": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "287": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "288": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "289": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "290": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "291": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "292": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "293": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "294": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "295": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "296": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "297": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "298": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "299": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image showing CLASSNAME."
+  },
+  "300": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "301": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "302": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "303": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "304": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "305": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "306": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "307": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "308": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "309": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "310": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "311": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "312": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "313": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "314": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "315": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "316": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "317": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "318": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "319": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "320": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "321": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "322": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "323": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "324": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "325": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "326": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "327": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "328": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "329": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological image of CLASSNAME."
+  },
+  "330": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "331": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "332": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "333": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "334": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "335": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "336": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "337": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "338": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "339": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "340": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "341": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "342": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "343": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "344": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "345": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "346": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "347": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "348": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "349": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "350": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "351": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "352": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "353": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "354": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "355": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "356": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "357": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "358": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "359": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph of CLASSNAME."
+  },
+  "360": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "361": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "362": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "363": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "364": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "365": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "366": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "367": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "368": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "369": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "370": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "371": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "372": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "373": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "374": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "375": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "376": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "377": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "378": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "379": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "380": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "381": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "382": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "383": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "384": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "385": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "386": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "387": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "388": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "389": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "a histopathological photograph showing CLASSNAME."
+  },
+  "390": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "391": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "392": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "393": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "394": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "395": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "396": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "397": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "398": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "399": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "400": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "401": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "402": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "403": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "404": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "405": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "406": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "407": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "408": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "409": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "410": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "411": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "412": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "413": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "414": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "415": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "416": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "417": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "418": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "419": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "shows CLASSNAME."
+  },
+  "420": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "421": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "422": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "423": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "424": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "425": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "426": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "427": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "428": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "429": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "430": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "431": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "432": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "433": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "434": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "435": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "436": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "437": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "438": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "439": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "440": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "441": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "442": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "443": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "444": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "445": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "446": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "447": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "448": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "449": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "presence of CLASSNAME."
+  },
+  "450": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "451": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "452": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "453": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "454": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "455": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "456": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "457": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "458": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "459": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "460": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "461": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "462": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "463": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "464": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "465": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "466": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "467": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "468": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "469": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "470": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "471": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "472": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "473": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "474": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "475": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "476": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "477": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "478": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "479": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME is present."
+  },
+  "480": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "481": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "482": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "483": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "484": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "485": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "486": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "487": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "488": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "489": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "490": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "491": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "492": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "493": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "494": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "495": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "496": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "497": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "498": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "499": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "500": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "501": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "502": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "503": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "504": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "505": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "506": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "507": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "508": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "509": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image of CLASSNAME."
+  },
+  "510": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "511": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "512": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "513": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "514": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "515": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "516": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "517": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "518": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "519": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "520": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "521": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "522": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "523": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "524": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "525": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "526": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "527": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "528": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "529": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "530": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "531": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "532": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "533": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "534": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "535": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "536": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "537": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "538": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "539": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E stained image showing CLASSNAME."
+  },
+  "540": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "541": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "542": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "543": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "544": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "545": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "546": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "547": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "548": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "549": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "550": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "551": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "552": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "553": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "554": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "555": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "556": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "557": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "558": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "559": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "560": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "561": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "562": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "563": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "564": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "565": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "566": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "567": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "568": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "569": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image showing CLASSNAME."
+  },
+  "570": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "571": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "572": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "573": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "574": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "575": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "576": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "577": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "578": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "579": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "580": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "581": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "582": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "583": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "584": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "585": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "586": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "587": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "588": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "589": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "590": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "591": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "592": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "593": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "594": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "595": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "596": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "597": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "598": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "599": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "an H&E image of CLASSNAME."
+  },
+  "600": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "601": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "602": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "603": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "604": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "605": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "606": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "607": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "608": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "609": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "610": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "611": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "612": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "613": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "614": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "615": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "616": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "617": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "618": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "619": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "620": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "621": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "622": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "623": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "624": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "625": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "626": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "627": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "628": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "629": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E stain."
+  },
+  "630": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "631": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "632": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "633": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "634": {
+    "classnames": {
+      "Tumor": "tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "635": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "636": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "637": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "638": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "639": {
+    "classnames": {
+      "Tumor": "tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "640": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "641": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "642": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "643": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "644": {
+    "classnames": {
+      "Tumor": "cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "645": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "646": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "647": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "648": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "649": {
+    "classnames": {
+      "Tumor": "breast tumor tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "650": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "651": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "652": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "653": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "654": {
+    "classnames": {
+      "Tumor": "breast tumor epithelial tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "655": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "normal tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "656": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "non-cancerous tissuenormal breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "657": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "breast non-cancerous tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "658": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign breast tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  },
+  "659": {
+    "classnames": {
+      "Tumor": "breast cancerous tissue",
+      "Normal": "benign tissue"
+    },
+    "templates": "CLASSNAME, H&E."
+  }
+}
