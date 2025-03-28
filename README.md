@@ -58,7 +58,7 @@ text_feature = model.encode_text(token_input)
 
 ```
 
-Alternatively, you can download the model weights from Google Drive with the link: [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) for easy inference.
+Alternatively, you can download the model weights from Google Drive with the link: [model_weights](https://drive.google.com/drive/folders/1warXpxtb4PoL_fQPyT1qsbSAdWjCRy04?usp=sharing) for easy inference.
 
 
 ## Evaluation on WSIs 
