@@ -1,0 +1,11 @@
+{
+  "0": {
+    "classnames": {
+      "Benign": "breast non-malignant benign tissue",
+      "InSitu": "breast malignant in-situ carcinoma",
+      "Invasive": "breast malignant invasive carcinoma",
+      "Normal": "breast normal breast tissue"
+    },
+    "templates": "An H&E image of CLASSNAME"
+  }
+}
