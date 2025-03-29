@@ -1,0 +1,190 @@
+{
+  "openpath_group_000014": {
+    "images": [
+      "laion_en_23.jpg"
+    ],
+    "merged_caption": [
+      "Image: Histopathology of (a) Usual-type high-grade urothelial carcinoma and (b) Positive E-cadherin expression in usual-type high-grade urothelial carcinoma. (Photo courtesy of Emory University School of Medicine)"
+    ],
+    "anatomy": "other",
+    "labels": {
+      "DOID:2671": {
+        "concept_syn": [
+          "transitional cell carcinoma",
+          "Urothelial carcinoma"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "carcinoma"
+      }
+    }
+  },
+  "openpath_group_014443": {
+    "images": [
+      "twitter_6013_0.jpg"
+    ],
+    "merged_caption": [
+      "Programmed death ligand 1 testing in non small cell lung carcinoma cytology cell block and aspirate smear preparations CytoPath cytology smears cellblock "
+    ],
+    "anatomy": "lung",
+    "labels": {
+      "DOID:3908": {
+        "concept_syn": [
+          "lung non-small cell carcinoma",
+          "lung non-small cell carcinoma"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "carcinoma"
+      }
+    }
+  },
+  "XKNsdGhUqiE_group_075857": {
+    "images": [
+      "XKNsdGhUqiE_image_fca795d5-2e45-4d96-a70c-aaa38af0cf2f.jpg"
+    ],
+    "merged_caption": [
+      "Anaplastic thyroid carcinoma with high mitotic activity and bizarre cells is very fast growing. Features of anaplastic carcinoma include widely invasive growth, extensive human necrosis, marked nuclear pleomorphism, high mitotic activity, and three patterns."
+    ],
+    "anatomy": "thyroid",
+    "labels": {
+      "DOID:0080522": {
+        "concept_syn": [
+          "thyroid gland anaplastic carcinoma",
+          "anaplastic thyroid carcinoma"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "carcinoma"
+      }
+    }
+  },
+  "aEPl5DGypp8_group_078763": {
+    "images": [
+      "aEPl5DGypp8_image_228695d5-7f50-4dd4-8be7-0f3847c9f15d.jpg",
+      "aEPl5DGypp8_image_47f08c74-ae5f-4264-bdf8-d018c424cad6.jpg"
+    ],
+    "merged_caption": [
+      "Melanoma cells are expressing key 67 while the nevus is negative. Discussion of the detection of key 67 by lymphocytes and melanocytes."
+    ],
+    "anatomy": "skin",
+    "labels": {
+      "DOID:8923": {
+        "concept_syn": [
+          "skin melanoma",
+          "Melanoma"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "melanoma"
+      }
+    }
+  },
+  "Vp-9C1FPiQs_group_074814": {
+    "images": [
+      "Vp-9C1FPiQs_image_20617670-346a-4b20-968c-38071b7ff420.jpg",
+      "Vp-9C1FPiQs_image_58e263c1-fbee-4dff-89ec-2e8361ea7c16.jpg",
+      "Vp-9C1FPiQs_image_ed624ea3-391b-47d3-ad15-116d570f2576.jpg"
+    ],
+    "merged_caption": [
+      "However, it was diagnosed as a cellular and aneurysmal dermatofibroma."
+    ],
+    "anatomy": "skin",
+    "labels": {
+      "DOID:4418": {
+        "concept_syn": [
+          "cutaneous fibrous histiocytoma",
+          "DERMATOFIBROMA"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "benign neoplasm",
+        "cancer_type": null
+      }
+    }
+  },
+  "V-NTBJpFKS0_group_033123": {
+    "images": [
+      "V-NTBJpFKS0_image_bb4e4cc0-180e-4d7f-b815-7e11dcb332e1.jpg",
+      "V-NTBJpFKS0_image_07bc847f-a59a-4e62-ad6e-84e27c14908f.jpg",
+      "V-NTBJpFKS0_image_6b2075ab-eed6-40e1-9897-3a0ba49b3534.jpg",
+      "V-NTBJpFKS0_image_569e41ba-0171-4d65-943f-986af2229320.jpg"
+    ],
+    "merged_caption": [
+      "The specimen shows a characteristic appearance of plexiform neurofibroma. It's important not to diagnose something as a plexiform neurofibroma without confirmation of a bag of worms appearance or a known diagnosis of NF1."
+    ],
+    "anatomy": "peripheral nervous system",
+    "labels": {
+      "DOID:5151": {
+        "concept_syn": [
+          "plexiform neurofibroma",
+          "plexiform neurofibroma"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "other"
+      }
+    }
+  },
+  "A4SBln-j8lg_group_028198": {
+    "images": [
+      "A4SBln-j8lg_image_c398c23d-1c2c-43fa-979a-137d71c0d659.jpg",
+      "A4SBln-j8lg_image_6f62ff13-d82f-4a09-a25d-3b7ea0d4f012.jpg"
+    ],
+    "merged_caption": [
+      "Diagnosis is squamous cell carcinoma of the lung, commonly associated with cigarette smoking and bronchial irritation."
+    ],
+    "anatomy": "lung",
+    "labels": {
+      "DOID:3907": {
+        "concept_syn": [
+          "lung squamous cell carcinoma",
+          "lung squamous cell carcinoma"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "carcinoma"
+      }
+    }
+  },
+  "FO1Zvoz3Ips_group_089500": {
+    "images": [
+      "FO1Zvoz3Ips_image_44a1fbd7-ab20-42a2-8d6a-c49cbaafdd7d.jpg"
+    ],
+    "merged_caption": [
+      "Presence of a reticular pattern and lower grade cells in some areas, suggesting the possibility of yolk sac tumor."
+    ],
+    "anatomy": null,
+    "labels": {
+      "DOID:1911": {
+        "concept_syn": [
+          "endodermal sinus tumor",
+          "yolk sac tumor"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "germ cell cancer"
+      }
+    }
+  },
+  "I7xxZtWAGUI_group_012816": {
+    "images": [
+      "I7xxZtWAGUI_image_43d3c0dc-cb9f-4922-b2af-4a26149cc8b4.jpg",
+      "I7xxZtWAGUI_image_b25b2940-8263-45ae-ae10-29d07802aab1.jpg"
+    ],
+    "merged_caption": [
+      "Metastasis is widespread throughout the body, including the kidney. Infiltration of liver, kidney, and bone marrow indicates a high stage and grade of the lymphoma."
+    ],
+    "anatomy": "bone",
+    "labels": {
+      "DOID:6759": {
+        "concept_syn": [
+          "bone lymphoma",
+          "bone lymphoma"
+        ],
+        "disease_type": "tumor",
+        "tumor_type": "cancer",
+        "cancer_type": "other"
+      }
+    }
+  }
+}

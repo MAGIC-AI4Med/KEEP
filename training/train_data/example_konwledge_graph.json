@@ -1,0 +1,877 @@
+{
+  "DOID:0001816": {
+    "name": "angiosarcoma",
+    "parent": [
+      "DOID:175"
+    ],
+    "synonyms": [
+      "Haemangioendothelioma, malignant",
+      "Hemangioendothelioma, malignant",
+      "angiosarcomas",
+      "Malignant hemangioendothelioma",
+      "malignant hemangioendothelioma",
+      "Hemangiosarcoma",
+      "hemangiosarcomas",
+      "haemangiosarcoma",
+      "Angiosarcomas",
+      "Hemangioendothelioma, malignant (morphologic abnormality)",
+      "HEMANGIOSARCOMA, MALIGNANT",
+      "Malignant haemangioendothelioma",
+      "Angiosarcoma Nonmetastatic",
+      "Angiosarcoma",
+      "Angiosarcoma (disorder)",
+      "Hemangiosarcoma (disorder)",
+      "Hemangiosarcoma (morphologic abnormality)",
+      "Haemangioendothelial sarcoma",
+      "hemangiosarcoma",
+      "angiosarcoma",
+      "Hemangioendothelial sarcoma",
+      "Haemangiosarcoma",
+      "Hemangiosarcomas",
+      "Non-Metastatic Hemangiosarcoma"
+    ],
+    "definitions": {
+      "DO": "A vascular cancer that derives_from the cells that line the walls of blood vessels or lymphatic vessels.",
+      "UMLS_0": "A rare malignant neoplasm characterized by rapidly proliferating, extensively infiltrating, anaplastic cells derived from blood vessels and lining irregular blood-filled or lumpy spaces. (Stedman, 25th ed)",
+      "UMLS_1": "Angiosarcoma that is confined to the site in which it initially manifested."
+    },
+    "children": [
+      "DOID:265",
+      "DOID:268",
+      "DOID:4505",
+      "DOID:4510",
+      "DOID:4512",
+      "DOID:4513",
+      "DOID:4522",
+      "DOID:4525",
+      "DOID:4527"
+    ]
+  },
+  "DOID:0002116": {
+    "name": "pterygium",
+    "parent": [
+      "DOID:10124"
+    ],
+    "synonyms": [
+      "Pterygium",
+      "pterygium",
+      "Pterygia",
+      "surfer's eye"
+    ],
+    "definitions": {
+      "DO": "A corneal disease that is characterized by a triangular tissue growth located_in cornea of the eye that is the result of collagen degeneration and fibrovascular proliferation.",
+      "UMLS_0": "Pterygia are 'winglike' triangular membranes occurring in the neck, eyes, knees, elbows, ankles or digits. [HPO:probinson]"
+    },
+    "children": [
+      "DOID:10525",
+      "DOID:10526"
+    ]
+  },
+  "DOID:0014667": {
+    "name": "disease of metabolism",
+    "parent": [
+      "DOID:4"
+    ],
+    "synonyms": [
+      "METABOLIC DISORDERS: GENERAL",
+      "Generalised metabolic disorder",
+      "metabolism disorder",
+      "Corneal deposits in metabolic disorders",
+      "Arthropathy assoc w metabolic disorder",
+      "Metabolic Disorders",
+      "Inborn error of metabolism",
+      "Generalized metabolic disorder (disorder)",
+      "Metabolic Disease",
+      "Metabolic disease, NOS",
+      "Left corneal deposits in metabolic disorders",
+      "Metabolic cardiomyopathy",
+      "Corneal deposit associated with metabolic disorder",
+      "metabolic disease",
+      "Metabolic disease (disorder)",
+      "Arthropathy due to metabolic disorder",
+      "MD - Metabolic disorders",
+      "Enzymopathy",
+      "Unspecified disorder of metabolism",
+      "metabolic disorders",
+      "metabolic disorder",
+      "Metabolic disorder",
+      "metabolic diseases",
+      "Cardiomyopathy, metabolic",
+      "Metabolic disease",
+      "Metabolism--Disorders",
+      "Thesaurismosis",
+      "Thesaurismoses",
+      "Multiple carboxylase deficiency",
+      "Metabolic Disorder",
+      "Metabolic disorder, NOS",
+      "Disease, Metabolic",
+      "Corneal deposits in metabolic disorders, both eyes",
+      "METABOLIC DISORDERS",
+      "Bilateral corneal deposits in metabolic disorders",
+      "Diseases, Metabolic",
+      "Generalized metabolic disorder",
+      "Metabolic derangement",
+      "Arthropathy due to a metabolic disorder",
+      "Right corneal deposits in metabolic disorders",
+      "Arthropathy with metabolic disorder",
+      "Metabolism disorder"
+    ],
+    "definitions": {
+      "DO": "A disease that involving errors in metabolic processes of building or degradation of molecules.",
+      "ICD10M_0": "Metabolic disorder, unspecified",
+      "UMLS_0": "Generic term for diseases caused by an abnormal metabolic process. It can be congenital due to inherited enzyme abnormality (METABOLISM, INBORN ERRORS) or acquired due to disease of an endocrine organ or failure of a metabolically important organ such as the liver. (Stedman, 26th ed)"
+    },
+    "children": [
+      "DOID:0060158",
+      "DOID:655",
+      "DOID:9120"
+    ]
+  },
+  "DOID:0040001": {
+    "name": "shrimp allergy",
+    "parent": [
+      "DOID:0060524"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A crustacean allergy that has_allergic_trigger shrimp."
+    },
+    "children": [
+      "DOID:0060525",
+      "DOID:0060527",
+      "DOID:0060528",
+      "DOID:0060529"
+    ]
+  },
+  "DOID:0040002": {
+    "name": "aspirin allergy",
+    "parent": [
+      "DOID:0060500"
+    ],
+    "synonyms": [
+      "acetylsalicylic acid allergy",
+      "ASA allergy"
+    ],
+    "definitions": {
+      "DO": "A drug allergy that has_allergic_trigger acetylsalicylic acid."
+    },
+    "children": []
+  },
+  "DOID:0040043": {
+    "name": "toluene meta-diisocyanate allergic asthma",
+    "parent": [
+      "DOID:0040041"
+    ],
+    "synonyms": [
+      "allergic asthma to TDI"
+    ],
+    "definitions": {
+      "DO": "An isocyanates allergic asthma that has_allergic_trigger toluene meta-diisocyanate."
+    },
+    "children": [
+      "DOID:0040104"
+    ]
+  },
+  "DOID:0040044": {
+    "name": "methyl isocyanate allergic asthma",
+    "parent": [
+      "DOID:0040041"
+    ],
+    "synonyms": [
+      "allergic asthma to MIC"
+    ],
+    "definitions": {
+      "DO": "An isocyanates allergic asthma that has_allergic_trigger methyl isocyanate."
+    },
+    "children": []
+  },
+  "DOID:0040045": {
+    "name": "nickel allergic asthma",
+    "parent": [
+      "DOID:0060501",
+      "DOID:9415"
+    ],
+    "synonyms": [
+      "allergic asthma to Ni"
+    ],
+    "definitions": {
+      "DO": "An allergic asthma that has_allergic_trigger nickel atom."
+    },
+    "children": []
+  },
+  "DOID:0040046": {
+    "name": "nickel allergic contact dermatitis",
+    "parent": [
+      "DOID:0060501",
+      "DOID:3042"
+    ],
+    "synonyms": [
+      "allergic contact dermatitis to Ni",
+      "Allergic contact dermatitis due to metal",
+      "Contact dermatitis due to metal"
+    ],
+    "definitions": {
+      "DO": "An allergic contact dermatitis that has_allergic_trigger nickel atom.",
+      "ICD10M_0": "Allergic contact dermatitis due to metals"
+    },
+    "children": []
+  },
+  "DOID:0040047": {
+    "name": "trimellitic anhydride allergic asthma",
+    "parent": [
+      "DOID:9415"
+    ],
+    "synonyms": [
+      "allergic asthma to TMA"
+    ],
+    "definitions": {
+      "DO": "An allergic asthma that has_allergic_trigger trimellitic anhydride."
+    },
+    "children": []
+  },
+  "DOID:0040048": {
+    "name": "phthalic anhydride allergic asthma",
+    "parent": [
+      "DOID:9415"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "An allergic asthma that has_allergic_trigger phthalic anhydride."
+    },
+    "children": []
+  },
+  "DOID:0050125": {
+    "name": "dengue shock syndrome",
+    "parent": [
+      "DOID:12205"
+    ],
+    "synonyms": [
+      "DSS"
+    ],
+    "definitions": {
+      "DO": "A dengue disease that involves the most severe form of dengue fever, has_material_basis_in Dengue virus [NCBITaxon:12637] with four serotypes (Dengue virus 1, 2, 3 and 4), which are transmitted_by Aedes mosquito bite. The infection has_symptom easy bruising, has_symptom blood spots, has_symptom bleeding gums, and has_symptom nosebleeds. It is accompanied by circulatory collapse, involves hypotension, narrow pulse pressure (less than or equal to 20mm Hg), or frank shock. The shock occurs after two to six days of symptoms, followed by collapse, weak pulse, and blueness around the mouth."
+    },
+    "children": []
+  },
+  "DOID:0050127": {
+    "name": "sinusitis",
+    "parent": [
+      "DOID:1352"
+    ],
+    "synonyms": [
+      "Acute sinusitis NOS",
+      "acute sinusitis",
+      "acute sinus infection",
+      "Acute sinusitis, NOS",
+      "Acute sinusitis (disorder)",
+      "Acute inflammation of sinus",
+      "ACUTE SINUSITIS",
+      "sinusitis acute",
+      "Acute Sinusitis",
+      "Acute infection of sinus",
+      "Acute inflammation of nasal sinus, NOS",
+      "SINUSITIS ACUTE",
+      "Acute sinusitis, unspecified",
+      "Acute infection of nasal sinus, NOS",
+      "Acute inflammation of nasal sinus",
+      "Acute sinusitis"
+    ],
+    "definitions": {
+      "DO": "A paranasal sinus disease involving inflammation of the paranasal sinuses resulting from bacterial, fungal, viral infection, allergic or autoimmune issues. Symptoms can include fever, weakness, fatigue, cough and congestion. There may also be mucus drainage in the back of the throat, called postnasal drip.",
+      "ICD10M_0": "Acute sinusitis",
+      "UMLS_0": "Sinusitis lasting less than or equal to thirty days."
+    },
+    "children": [
+      "DOID:10791",
+      "DOID:10794",
+      "DOID:2051",
+      "DOID:9507"
+    ]
+  },
+  "DOID:0050129": {
+    "name": "secretory diarrhea",
+    "parent": [
+      "DOID:13250"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A diarrhea where there is an increase in the active secretion, or there is an inhibition of absorption causing little to no structural damage. The most common cause of this type of diarrhea is a cholera toxin that stimulates the secretion of anions, especially chloride ions."
+    },
+    "children": [
+      "DOID:0060296",
+      "DOID:0060777",
+      "DOID:0060781"
+    ]
+  },
+  "DOID:0050130": {
+    "name": "osmotic diarrhea",
+    "parent": [
+      "DOID:13250"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A dirrhea that occurs when too much water is drawn into the bowels. This can be the result of maldigestion (e.g., pancreatic disease or Coeliac disease), in which the nutrients are left in the lumen to pull in water. Osmotic diarrhea can also be caused by osmotic laxatives (which work to alleviate constipation by drawing water into the bowels). In healthy individuals, too much magnesium or vitamin C or undigested lactose can produce osmotic diarrhea and distention of the bowel. A person who does not have lactose intolerance can have difficulty absorbing lactose after an extraordinarily high intake of dairy products."
+    },
+    "children": []
+  },
+  "DOID:0050131": {
+    "name": "motility-related diarrhea",
+    "parent": [
+      "DOID:13250"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A diarrhea which is caused by the rapid movement of food through the intestines (hypermotility). If the food moves too quickly through the GI tract, there is not enough time for sufficient nutrients and water to be absorbed."
+    },
+    "children": []
+  },
+  "DOID:0050132": {
+    "name": "inflammatory diarrhea",
+    "parent": [
+      "DOID:13250"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A gastrointestinal system infectious disease involving diarrhea that occurs when there is damage to the mucosal lining or brush border, which leads to a passive loss of protein-rich fluids, and a decreased ability to absorb these lost fluids. It can be caused by bacterial infections, viral infections, parasitic infections, or autoimmune problems such as inflammatory bowel diseases. It can also be caused by tuberculosis, colon cancer, and enteritis."
+    },
+    "children": []
+  },
+  "DOID:0050133": {
+    "name": "superficial mycosis",
+    "parent": [
+      "DOID:1564"
+    ],
+    "synonyms": [
+      "piedra",
+      "Right mycotic otitis externa due to otomycosis",
+      "Left mycotic otitis externa due to otomycosis",
+      "Chronic mycotic otitis externa",
+      "Dermal mycosis",
+      "Both sides chronic mycotic otitis externa",
+      "Both sides mycotic otitis externa due to otomycosis",
+      "Otitis mycotic externa due to otomycosis",
+      "Piedras",
+      "Piedra",
+      "Steroid-modified tinea infection",
+      "Left otitis mycotic externa due to otomycosis",
+      "Right otitis mycotic externa due to otomycosis",
+      "Otitis externa (ear canal infection), chronic mycotic",
+      "Bilateral chronic mycotic otitis externa",
+      "Left chronic mycotic otitis externa",
+      "piedras",
+      "Bilateral otitis mycotic externa due to otomycosis",
+      "Otomycosis (ear condition)",
+      "Right chronic mycotic otitis externa",
+      "Otomycosis",
+      "Dermal mycosis (fungal infection)"
+    ],
+    "definitions": {
+      "DO": "A fungal infectious disease that results_in infection of the outermost layer located_in skin or located_in hair shaft, has_material_basis_in Fungi. No living tissue is invaded and there is no cellular response from the host.",
+      "ICD10M_0": "Superficial mycosis, unspecified",
+      "UMLS_0": "Either of two diseases resulting from fungal infection of the hair shafts. Black piedra occurs mainly in and on the hairs of the scalp and is caused by Piedraia hortae; white piedra occurs in and on the hairs of the scalp, beard, moustache and genital areas and is caused by Trichosporon species."
+    },
+    "children": [
+      "DOID:12711",
+      "DOID:13902",
+      "DOID:8912",
+      "DOID:9060"
+    ]
+  },
+  "DOID:0050134": {
+    "name": "cutaneous mycosis",
+    "parent": [
+      "DOID:1564"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A fungal infectious disease that results_in infection of the keratinized layers located_in skin, located_in hair or located_in nail, which extends deeper into the epidermis, has_material_basis_in Fungi and results_in_formation_of skin lesions."
+    }
+  },
+  "DOID:0050135": {
+    "name": "subcutaneous mycosis",
+    "parent": [
+      "DOID:1564"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A fungal infectious disease that results_in infection located_in skin or located_in subcutaneous tissue, has_material_basis_in Fungi, which penetrate the dermis or even deeper during or after a skin trauma."
+    }
+  },
+  "DOID:0050136": {
+    "name": "systemic mycosis",
+    "parent": [
+      "DOID:1564"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A fungal infectious disease that results_in infection of internal organs and tissues located_in human body, has_material_basis_in Fungi, which enter the body via the respiratory tract, through the gut, paranasal sinuses or skin and spread through the bloodstream to multiple organs."
+    }
+  },
+  "DOID:0050138": {
+    "name": "podoconiosis",
+    "parent": [
+      "DOID:4976"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "An elephantiasis that is characterized by lymphadema located_in the lower extremities caused by a genetically determined abnormal inflammatory reaction to mineral particles in irritant red clay soils derived from volcanic deposits."
+    },
+    "children": []
+  },
+  "DOID:0050140": {
+    "name": "acute diarrhea",
+    "parent": [
+      "DOID:13250"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A diarrhea that is of rapid onset and course characterized by frequent loose or liquid bowel movements. Acute diarrhea is a common cause of death in developing countries and the second most common cause of infant deaths worldwide."
+    },
+    "children": []
+  },
+  "DOID:0050141": {
+    "name": "intestinal botulism",
+    "parent": [
+      "DOID:11976"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A botulism that involves intoxication caused by botulinum neurotoxins (BoNTA, B, E and F) in adults, has_material_basis_in Clostridium botulinum A, has_material_basis_in Clostridium botulinum B, has_material_basis_in Clostridium botulinum E and has_material_basis_in Clostridium botulinum F, which are transmitted by ingestion of bacterial spores, which then grow in the intestine and release toxins."
+    },
+    "children": []
+  },
+  "DOID:0050143": {
+    "name": "asymptomatic dengue",
+    "parent": [
+      "DOID:12205"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A dengue disease that results_in infection, has_material_basis_in Dengue virus [NCBITaxon:12637] with four serotypes (Dengue virus 1, 2, 3 and 4), which are transmitted_by Aedes mosquito bite. The infection has no manifestations of symptoms."
+    },
+    "children": []
+  },
+  "DOID:0050144": {
+    "name": "Kartagener syndrome",
+    "parent": [
+      "DOID:9562"
+    ],
+    "synonyms": [
+      "Kartagener's syndrome"
+    ],
+    "definitions": {
+      "DO": "A primary ciliary dyskinesia that is characterized by sinusitis, bronchiectasis and situs inversus with dextrocardia resulting from dysfunction of the cilia during embryologic development."
+    },
+    "children": []
+  },
+  "DOID:0050145": {
+    "name": "adenoiditis",
+    "parent": [
+      "DOID:974"
+    ],
+    "synonyms": [
+      "chronic adenoiditis",
+      "Adenoiditis, chronic"
+    ],
+    "definitions": {
+      "DO": "An upper respiratory tract disease which involves inflammation, pain, and swelling of the adenoid tissue due to the infection by bacteria and viruses. It occurs primarily in children and may be secondary to an allergy, infection of nose or throat and an obstruction of the eustachian tube. The infection has symptom pain, has symptom redness, has symptom swelling, and has symptom difficulty swallowing.",
+      "ICD10M_0": "Chronic adenoiditis"
+    },
+    "children": [],
+  },
+  "DOID:0050147": {
+    "name": "otomycosis",
+    "parent": [
+      "DOID:9463"
+    ],
+    "synonyms": [
+      "Singapore ear"
+    ],
+    "definitions": {
+      "DO": "An otitis externa which is a disease of the ear produced by the growth of fungi in the external auditory canal. It is characterized by inflammation, pruritus, scaling and severe discomfort. The most common fungi are Aspergillus niger and Candida albicans."
+    },
+    "children": [
+      "DOID:10519"
+    ]
+  },
+  "DOID:0050148": {
+    "name": "laryngotracheitis",
+    "parent": [
+      "DOID:974"
+    ],
+    "synonyms": [
+      "Laryngotracheitis, chronic"
+    ],
+    "definitions": {
+      "DO": "An upper respiratory tract disease involving inflammation of both larynx and trachea often caused by viral infection. The infection can close off the windpipe.",
+      "ICD10M_0": "Acute laryngitis and tracheitis",
+      "ICD10M_1": "Chronic laryngotracheitis"
+    },
+    "children": []
+  },
+  "DOID:0050150": {
+    "name": "Pontiac fever",
+    "parent": [
+      "DOID:10458"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A legionellosis that involves a milder respiratory illness without pneumonia. Symptoms include fever, headache and muscle aches which last for 2 to 5 days."
+    },
+    "children": []
+  },
+  "DOID:0050152": {
+    "name": "aspiration pneumonia",
+    "parent": [
+      "DOID:874"
+    ],
+    "synonyms": [
+      "Aspiration pneumonia (disorder)",
+      "Acute aspiration pneumonia",
+      "ASPIRATION PNEUMONIA",
+      "Aspiration pneumonia, vomitus",
+      "aspiration pneumonia",
+      "Aspiration pneumonia, chronic, recurrent",
+      "inhalation pneumonia",
+      "pneumonia aspiration",
+      "Pneumonias, Aspiration",
+      "Aspiration pneumonia due to regurgitated gastric secretions",
+      "ASPIRATION PNEUMONIAS",
+      "Aspiration pneumonitis, NOS",
+      "Recurrent aspiration pneumonia",
+      "Aspiration pneumonia NOS",
+      "Aspiration pneumonia, acute",
+      "Aspiration pneumonia, NOS",
+      "Aspiration Pneumonia",
+      "PNEUMONIA, ASPIRATION",
+      "Aspiration pneumonia",
+      "Aspiration pneumonia due to inhalation of milk",
+      "Aspiration Pneumonias",
+      "Aspiration pneumonia, gastric secretions",
+      "pneumonia, inhalation",
+      "aspiration pneumonitis",
+      "Pneumonia, Aspiration",
+      "Aspiration pneumonia, food",
+      "Aspiration pneumonia, milk",
+      "Inhalation pneumonia",
+      "Pneumonia, inhalation",
+      "Pneumonia, aspiration",
+      "Aspiration pneumonia due to inhalation of vomitus",
+      "Aspiration pneumonia due to regurgitated food"
+    ],
+    "definitions": {
+      "DO": "A bacterial pneumonia which is an acute pulmonary inflammatory response that develops after the inhalation of colonized oropharyngeal material containing bacteria. It is seen in individuals with dysphagia and gastric dysmotility. The disease has_symptom tachypnea and has_symptom cough.",
+      "ICD10M_0": "Pneumonitis due to inhalation of food and vomit",
+      "UMLS_0": "A type of lung inflammation resulting from the aspiration of food, liquid, or gastric contents into the upper RESPIRATORY TRACT."
+    },
+    "children": [
+      "DOID:873"
+    ]
+  },
+  "DOID:0050153": {
+    "name": "pulmonary aspergilloma",
+    "parent": [
+      "DOID:13564",
+      "DOID:850"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "An aspergillosis that presents as a clump of tangled mass of Aspergillus fungus fibres, blood clots, and white blood cells, which exists in the cavities of the lungs that develop in an area of previous lung disease or lung scarring."
+    },
+    "children": []
+  },
+  "DOID:0050155": {
+    "name": "sensory system disease",
+    "parent": [
+      "DOID:863"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A nervous system disease which is located in a part of the nervous system responsible for processing sensory information that consists of sensory receptors, neural pathways, and parts of the brain involved in sensory perception. Commonly recognized sensory systems are those for vision, hearing, somatic sensation (touch), taste and olfaction (smell)."
+    },
+    "children": [
+      "DOID:0060030",
+      "DOID:0060096",
+      "DOID:0060116",
+      "DOID:0112240",
+      "DOID:2742",
+      "DOID:5614"
+    ]
+  },
+  "DOID:0050156": {
+    "name": "idiopathic pulmonary fibrosis",
+    "parent": [
+      "DOID:3770"
+    ],
+    "synonyms": [
+      "Fibrosing alveolitis",
+      "ALVEOLITIS, FIBROSING",
+      "Cryptogenic Fibrosing Alveolitis",
+      "ALVEOLITIS, CHRONIC DIFFUSE SCLEROSING",
+      "cryptogenic fibrosing alveolitis",
+      "IPF",
+      "Dysplasia, Fibrocystic Pulmonary",
+      "Pneumonia, interstitial usual (uip)",
+      "FIBROSING ALVEOLITIS, CRYPTOGENIC",
+      "IDIOPATHIC PULMONARY FIBROSIS, FAMILIAL",
+      "PULMONARY FIBROSIS, IDIOPATHIC",
+      "Idiopathic pulmonary fibrosis",
+      "Usual interstitial pneumonia",
+      "Cryptogenic fibrosing alveolitis",
+      "Fibrocystic Pulmonary Dysplasia",
+      "Pulmonary Dysplasia, Fibrocystic",
+      "Fibrocystic Pulmonary Dysplasias",
+      "FIBROCYSTIC PULMONARY DYSPLASIA",
+      "ALVEOLITIS FIBROSING",
+      "FIBROSIS, IDIOPATHIC PULMONARY",
+      "Cryptogenic Fibrosing Alveolitides",
+      "Pulmonary Fibrosis, Idiopathic",
+      "Idiopathic Pulmonary Fibrosis",
+      "Pulmonary Fibroses, Idiopathic",
+      "fibrosing alveolitis",
+      "Idiopathic Pulmonary Fibroses",
+      "diopathic pulmonary fibrosis",
+      "Idiopathic pulmonary fibrosis (disorder)",
+      "Idiopathic Fibrosing Alveolitis, Chronic Form",
+      "fibrosis idiopathic pulmonary",
+      "pulmonary fibrosis idiopathic",
+      "idiopathic pulmonary fibrosis",
+      "Idiopathic fibrosing alveolitis, chronic form",
+      "Fibrosing Alveolitis, Cryptogenic",
+      "diffuse interstitial pulmonary fibrosis",
+      "ALVEOLITIS, CHRONIC DIFFUSE FIBROSING",
+      "Idiopathic interstitial pneumonia",
+      "fibrosis idiopathic ipf pulmonary",
+      "Fibrosing alveolitis, idiopathic",
+      "Idiopathic fibrosing alveolitis",
+      "Fibrosing Alveolitides, Cryptogenic"
+    ],
+    "definitions": {
+      "DO": "A pulmonary fibrosis that is characterized by scarring of the lung.",
+      "ICD10M_0": "Idiopathic pulmonary fibrosis",
+      "UMLS_0": "A common interstitial lung disease of unknown etiology, usually occurring between 50-70 years of age. Clinically, it is characterized by an insidious onset of breathlessness with exertion and a nonproductive cough, leading to progressive DYSPNEA. Pathological features show scant interstitial inflammation, patchy collagen fibrosis, prominent fibroblast proliferation foci, and microscopic honeycomb change."
+    },
+    "children": []
+  },
+  "DOID:0050157": {
+    "name": "cryptogenic organizing pneumonia",
+    "parent": [
+      "DOID:2797"
+    ],
+    "synonyms": [
+      "Idiopathic bronchiolitis obliterans organizing pneumonia",
+      "Bronchiolitis obliterans organizing pneumonia",
+      "COP - Cryptogenic organising pneumonitis",
+      "bronchiolitis obliterans organising pneumonia",
+      "Cryptogenic organizing pneumonitis",
+      "bronchiolitis obliterans organizing pneumonia (BOOP)",
+      "Bronchiolitis obliterans organising pneumonia",
+      "Cryptogenic organizing pneumonia",
+      "Organizing Pneumonia, Cryptogenic",
+      "idiopathic bronchiolitis obliterans with organising pneumonia",
+      "Bronchiolitis Obliterans Organizing Pneumonia",
+      "idiopathic bronchiolitis obliterans with organizing pneumonia",
+      "Cryptogenic Organizing Pneumonias",
+      "BOOP - Bronchiolitis obliterans organizing pneumonia",
+      "boop",
+      "Cryptogenic organizing pneumoni",
+      "Cryptogenic organizing pneumonia (disorder)",
+      "Organizing Pneumonias, Cryptogenic",
+      "bronchiolitis obliterans organizing pneumonia",
+      "Cryptogenic organising pneumonitis",
+      "cryptogenic organizing pneumonia",
+      "Cryptogenic organising pneumonia",
+      "Pneumonias, Cryptogenic Organizing",
+      "cryptogenic organising pneumonia",
+      "Bronchiolitis obliterans with usual interstitial pneumonitis",
+      "COP",
+      "BOOP - Bronchiolitis obliterans organising pneumonia",
+      "BOOP",
+      "COP - Cryptogenic organizing pneumonitis",
+      "Pneumonia, Cryptogenic Organizing",
+      "Cryptogenic Organizing Pneumonia"
+    ],
+    "definitions": {
+      "DO": "An idiopathic interstitial pneumonia characterized by lung inflammation and scarring that obstructs the small airways and air sacs of the lungs (alveoli). A flu-like illness, with a cough, fever, a feeling of illness (malaise), fatigue, and weight loss, heralds the onset in about 50% of people. Frequent presence of crackling sounds (called Velcro crackles) when the doctor listens with a stethoscope.",
+      "ICD10M_0": "Cryptogenic organizing pneumonia",
+      "UMLS_0": "A form of organizing pneumonia with a non-infectious etiology. Excessive proliferation of granulation tissue occurs in alveolar ducts and alveoli and primarily causes injury to alveolar walls, but bronchioles may be affected."
+    },
+    "children": []
+  },
+  "DOID:0050158": {
+    "name": "desquamative interstitial pneumonia",
+    "parent": [
+      "DOID:2797"
+    ],
+    "synonyms": [
+      "Desquamative interstitial pneumonia (disorder)",
+      "Interstitial Pneumonitis, Desquamative, Familial",
+      "DIP",
+      "RBILD",
+      "ILD, DESQUAMATIVE",
+      "Pneumonitis, Desquamative Interstitial, Familial",
+      "familial desquamative interstitial pneumonitis",
+      "Respiratory Bronchiolitis Interstitial Lung Disease",
+      "INTERSTITIAL PNEUMONITIS, DESQUAMATIVE, FAMILIAL",
+      "Desquamative Interstitial Pneumonia",
+      "PNEUMONITIS, DESQUAMATIVE INTERSTITIAL, FAMILIAL",
+      "respiratory bronchiolitis-associated interstitial lung disease",
+      "Desquamative interstitial pneumonia",
+      "DIP - Desquamative interstitial pneumonitis",
+      "desquamative interstitial pneumonia (DIP)",
+      "Pneumonia, Desquamative Interstitial, Familial",
+      "Respiratory bronchiolitis interstitial lung disease",
+      "Desquamative interstitial pneumonitis",
+      "PNEUMONIA, DESQUAMATIVE INTERSTITIAL, FAMILIAL",
+      "Interstitial Lung Disease, Desquamative",
+      "PNEUMONIA, DESQUAMATIVE INTERSTITIAL",
+      "INTERSTITIAL LUNG DISEASE, DESQUAMATIVE"
+    ],
+    "definitions": {
+      "DO": "An idiopathic interstitial pneumonia that is characterized by the accumulation of bronchiolocentric alveolar macrophages in alveolar spaces and interstitial inflammation and involves mild bronchiolar fibrosis and chronic inflammation.",
+      "ICD10M_0": "Desquamative interstitial pneumonia",
+      "UMLS_0": "A rare idiopathic interstitial pneumonia characterized by accumulation of macrophages in alveolar spaces and interstitial inflammation. It usually occurs in smokers. Some patients develop progressive interstitial lung fibrosis."
+    },
+    "children": []
+  },
+  "DOID:0050159": {
+    "name": "lymphoid interstitial pneumonia",
+    "parent": [
+      "DOID:2797"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "An idiopathic interstitial pneumonia which involves diffuse interstitial infiltration of involved areas mostly with T lymphocytes, plasma cells, and macrophages. Lymphoid hyperplasia is frequently seen. Onset is often slow with gradually increasing cough and breathlessness over 3 or more years. Fever, weight loss, chest pain, and arthralgia are occasionally found. Crackles may be detected as the disease progresses."
+    },
+    "children": []
+  },
+  "DOID:0050160": {
+    "name": "inhalation anthrax",
+    "parent": [
+      "DOID:7427"
+    ],
+    "synonyms": [
+      "pulmonary anthrax",
+      "woolsorters' disease",
+      "wool-sorters' disease",
+      "respiratory anthrax"
+    ],
+    "definitions": {
+      "DO": "An anthrax disease that results in infection located in lung lymph nodes brought on by breathing in the spores of the bacteria Bacillus anthracis. The first symptoms of inhalation anthrax are like cold or flu symptoms and can include a sore throat, mild fever and muscle aches. Later symptoms include cough, chest discomfort, shortness of breath, tiredness and muscle aches."
+    },
+    "children": []
+  },
+  "DOID:0050161": {
+    "name": "lower respiratory tract disease",
+    "parent": [
+      "DOID:1579"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A respiratory system disease which involves the lower respiratory tract."
+    },
+    "children": [
+      "DOID:1176",
+      "DOID:1532",
+      "DOID:850"
+    ]
+  },
+  "DOID:0050166": {
+    "name": "tuberculous salpingitis",
+    "parent": [
+      "DOID:1962",
+      "DOID:2149"
+    ],
+    "synonyms": [
+      "Tuberculous endometritis",
+      "Tuberculous cervicitis",
+      "Tuberculous salpingitis",
+      "Tuberculosis (tb) oophoritis",
+      "Tuberculous oophoritis",
+      "Tuberculosis (tb) salpingitis",
+      "Tuberculosis (tb) of uterine cervix",
+      "Tuberculosis (tb) endometritis"
+    ],
+    "definitions": {
+      "DO": "An urogenital tuberculosis that results_in formation of granulomas located_in fallopian tube.",
+      "ICD10M_0": "Tuberculous female pelvic inflammatory disease"
+    },
+    "children": []
+  },
+  "DOID:0050167": {
+    "name": "autoimmune polyendocrine syndrome type 1",
+    "parent": [
+      "DOID:14040"
+    ],
+    "synonyms": [
+      "Autoimmune Polyglandular Syndrome I",
+      "Whitaker syndrome",
+      "autoimmune polyendocrinopathy-candidiasis-ectodermal dystrophy"
+    ],
+    "definitions": {
+      "DO": "An autoimmune polyendocrine syndrome that is inherited in an autosomal recessive fashion, which is characterized by abnormal functioning of the immune system that causes auto-reactivity against endocrine organs."
+    },
+    "children": []
+  },
+  "DOID:0050168": {
+    "name": "autoimmune polyendocrine syndrome type 2",
+    "parent": [
+      "DOID:14040"
+    ],
+    "synonyms": [
+      "Schmidt syndrome"
+    ],
+    "definitions": {
+      "DO": "An autoimmune polyendocrine syndrome that is characterized by abnormal functioning of the immune system that causes auto-reactivity against endocrine organs. It is more heterogeneous and has not been linked to one gene."
+    },
+    "children": []
+  },
+  "DOID:0050169": {
+    "name": "cutaneous lupus erythematosus",
+    "parent": [
+      "DOID:37",
+      "DOID:8857"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A lupus erythematosus that causes skin lesions on parts of the body that are exposed to sunlight."
+    },
+    "children": [
+      "DOID:0060386"
+    ]
+  },
+  "DOID:0050174": {
+    "name": "Kunjin encephalitis",
+    "parent": [
+      "DOID:2365"
+    ],
+    "synonyms": [],
+    "definitions": {
+      "DO": "A West Nile encephalitis that results_in infection located_in brain, has_material_basis_in Kunjin virus, a subtype of West Nile Virus, which is transmitted_by Culex annulirostris mosquito bite. The infection has_symptom fever, has_symptom rigor, has_symptom headache, has_symptom confusion, and has_symptom lethargy."
+    },
+    "children": []
+  },
+  "DOID:0050175": {
+    "name": "tick-borne encephalitis",
+    "parent": [
+      "DOID:934"
+    ],
+    "synonyms": [
+      "Far Eastern TBE",
+      "Russian spring-summer encephalitis",
+      "Encephalitis due to european subtype of tick-borne encephalitis virus",
+      "Siberian tick-borne encephalitis",
+      "Western European tick-borne encephalitis",
+      "Taiga encephalitis",
+      "Central European encephalitis",
+      "west-Siberian encephalitis"
+    ],
+    "definitions": {
+      "DO": "A viral infectious disease that results_in inflammation located_in brain, has_material_basis_in Tick-borne encephalitis virus, which is transmitted_by Ixodes ticks. The infection has_symptom drowsiness, has_symptom confusion, has_symptom sensory disturbances, and has_symptom paralysis.",
+      "ICD10M_0": "Central European tick-borne encephalitis"
+    },
+    "children": [
+      "DOID:0050179"
+    ]
+  }
+}
