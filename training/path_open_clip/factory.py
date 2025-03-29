@@ -10,9 +10,9 @@ from typing import Any, Dict, Optional, Tuple, Union
 import torch
 
 from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
-from .model.model import KEP,  convert_weights_to_lp, convert_to_custom_text_state_dict,\
+from .model.model import KEP, vit_bert, convert_weights_to_lp, convert_to_custom_text_state_dict,\
     resize_pos_embed, get_cast_dtype
-from .loss import  KepLoss
+from .loss import  ClipLoss, KepMetricLoss, MetricLoss, HyMetricLoss
 from .openai import load_openai_model
 from .pretrained import download_pretrained_from_hf
 from .transform import image_transform, AugmentationCfg
@@ -25,6 +25,8 @@ from .model.ctran import ctranspath
 from torchvision.models.resnet import Bottleneck
 from .model.res_ssl import ResNetTrunk
 from .model.pmc_clip import PMC_CLIP
+import timm
+from torchvision import transforms
 
 
 HF_HUB_PREFIX = 'hf-hub:'
@@ -80,15 +82,9 @@ def get_model_config(model_name):
         return None
 
 
-def get_tokenizer(model_name, bert_pretrain, text_encoder, knowledge_guidance):
+def get_tokenizer(model_name, bert_pretrain, text_encoder):
     tokenizer = dict()
     if bert_pretrain and text_encoder == 'bert':
-        tokenizer['bert'] = AutoTokenizer.from_pretrained(bert_pretrain,do_lower_case=True, local_files_only=True)
-        return tokenizer
-    elif knowledge_guidance and text_encoder in ['clip','biomed']:
-        config = get_model_config(model_name)
-        tokenizer['clip'] = HFTokenizer(
-            config['text_cfg']['hf_tokenizer_name']) if 'hf_tokenizer_name' in config['text_cfg'] else tokenize
         tokenizer['bert'] = AutoTokenizer.from_pretrained(bert_pretrain,do_lower_case=True, local_files_only=True)
         return tokenizer
 
@@ -146,11 +142,11 @@ def create_model(
         model_name: str,
         logit_scale,
         text_encoder: Optional[str] = None,
+        test_emb_dim: int = 512,
         bert_pretrain: Optional[str] = None,
         image_encoder: str = None,
         pretrained_image: str = None,
         knowledge_bert: Optional[str] = None,
-        knowledge_distillation: Optional[str] = None,
         visual_embedding_head: bool = False,
         text_embedding_head: bool = False,
         precision: str = 'fp32',
@@ -178,19 +174,6 @@ def create_model(
     if isinstance(device, str):
         device = torch.device(device)
 
-    # if pretrained and pretrained.lower() == 'openai':
-    #     logging.info(f'Loading pretrained {model_name} from OpenAI.')
-    #     model = load_openai_model(
-    #         model_name,
-    #         precision=precision,
-    #         device=device,
-    #         cache_dir=cache_dir,
-    #     )
-    #     model.logit_scale = nn.Parameter(torch.ones([]) * np.log(1 / logit_scale))
-    #     model.to(device)
-    #     print(model.logit_scale)
-    #     # model.logit_scale = torch.tensor(logit_scale)
-    # else:
     model_cfg = model_cfg or get_model_config(model_name)
     if model_cfg is not None:
         logging.info(f'Loaded {model_name} model config.')
@@ -198,142 +181,43 @@ def create_model(
         logging.error(f'Model config for {model_name} not found; available models {list_models()}.')
         raise RuntimeError(f'Model config for {model_name} not found.')
 
-    # if force_quick_gelu:
-    #     # override for use of QuickGELU on non-OpenAI transformer models
-    #     model_cfg["quick_gelu"] = True
 
-    # if force_patch_dropout is not None:
-    #     # override the default patch dropout value
-    #     model_cfg["vision_cfg"]["patch_dropout"] = force_patch_dropout
-
-    # if force_image_size is not None:
-    #     # override model config's image size
-    #     model_cfg["vision_cfg"]["image_size"] = force_image_size
-
-    # is_timm_model = 'timm_model_name' in model_cfg.get('vision_cfg', {})
-
-    # # cast_dtype set for fp16 and bf16 (manual mixed-precision), not set for 'amp' or 'pure' modes
-    # cast_dtype = get_cast_dtype(precision)
-    # is_hf_model = 'hf_model_name' in model_cfg.get('text_cfg', {})
-    # custom_text = model_cfg.pop('custom_text', False) or force_custom_text or is_hf_model
-
-    # if custom_text:
-    #     if is_hf_model:
-    #         model_cfg['text_cfg']['hf_model_pretrained'] = pretrained_hf
-    #     if "coca" in model_name:
-    #         model = CoCa(**model_cfg, cast_dtype=cast_dtype)
-    #     else:
-    #         model = CustomTextCLIP(**model_cfg, cast_dtype=cast_dtype)
-    # else:
-    # model_cfg = model_cfg or get_model_config(model_name)
-    
     is_timm_model = 'timm_model_name' in model_cfg.get('vision_cfg', {})
     cast_dtype = get_cast_dtype(precision)
-    model = KEP(**model_cfg, 
-                    text_encoder = text_encoder,
-                    image_encoder = image_encoder,
-                    bert_pretrain= bert_pretrain, 
-                    cast_dtype=cast_dtype,
-                    visual_embedding_head=visual_embedding_head,
-                    text_embedding_head=text_embedding_head,
-                    logit_scale= logit_scale
-                    )
+
+    model_cfg['embed_dim'] = test_emb_dim
+    model = vit_bert(**model_cfg, 
+                        text_encoder = text_encoder,
+                        image_encoder = image_encoder,
+                        bert_pretrain= bert_pretrain, 
+                        cast_dtype=cast_dtype,
+                        visual_embedding_head=visual_embedding_head,
+                        text_embedding_head=text_embedding_head,
+                        logit_scale= logit_scale
+    )
+
     ## Whether to initialize the text encoder of KEP by the knowledge-BERT
     if knowledge_bert:
         checkpoint = torch.load(knowledge_bert, map_location='cpu')
         state_dict = checkpoint["state_dict"]
+        if next(iter(state_dict.items()))[0].startswith('module.'):
+            state_dict = {k[len('module.'):]: v for k, v in state_dict.items()}
         missing_keys, unexpected_keys = model.text.load_state_dict(state_dict, strict=False)
         print('load knowledge to text encoder, missing keys: ', missing_keys)
         print('load knowledge to text encoder, unexpected keys: ', unexpected_keys)
         logging.info(f'Load pretrained text bert success from: {knowledge_bert}')
 
-    ## Whether to use the knowledge-BERT to continuously distill knowledge into the CLIP-based models during training
-    if knowledge_distillation:
-        checkpoint = torch.load(knowledge_distillation, map_location='cpu')
-        state_dict = checkpoint["state_dict"]
-        missing_keys, unexpected_keys = model.knowledge.load_state_dict(state_dict, strict=False)
-        print('load knowledge to knowledge encoder, missing keys: ', missing_keys)
-        print('load knowledge to knowledge encoder, unexpected keys: ', unexpected_keys)
-        logging.info(f'Load pretrained knowledge bert success from: {knowledge_distillation}')
-
-    ## Whether use the visual encoder of CLIP 
-    if image_encoder == 'clip_vit':
-        ori_clip_model = load_openai_model(
-                            model_name,
-                            precision=precision,
-                            device=device,
-                            cache_dir=cache_dir,
-                        )
-        model.visual.load_state_dict(ori_clip_model.visual.state_dict())
-        logging.info('Load pretrained vision encoder success from CLIP.')
+   
+    uni_model = timm.create_model(
+        "vit_large_patch16_224", img_size=224, patch_size=16, init_values=1e-5, num_classes=0, dynamic_img_size=True
+    )
+    uni_path = pretrained_image + 'pytorch_model.bin'
+    uni_model.load_state_dict(torch.load(uni_path, map_location="cpu"), strict=True)
+    model.visual = uni_model
+    model.visual.image_size = 224
     
-    ## Whether use the visual encoder of BiomedCLIP
-    elif pretrained_image and image_encoder == 'biomed':
-        # model_root = '../../pathclip_eval/model_zoo/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/'
-        # model, preprocess_train, preprocess_val = open_clip.create_model_and_transforms('../../pathclip_eval/model_zoo/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/')
-        with open(pretrained_image + 'open_clip_config.json', 'r', encoding='utf-8') as f:
-            config = json.load(f)
-        model_cfg = config['model_cfg']
-        checkpoint_path = pretrained_image + 'open_clip_pytorch_model.bin'
-        biomed_model = open_clip.model.CustomTextCLIP(**model_cfg, cast_dtype=cast_dtype)
-        logging.info(f'Loading pretrained {model_name} weights ({checkpoint_path}).')
-        biomed_load_checkpoint(biomed_model, checkpoint_path)
-        
-        model.visual = biomed_model.visual
-
-        
-        logging.info('Load pretrained vision encoder success from BiomedCLIP.')
-    
-    elif pretrained_image and image_encoder == 'ctp':
-        # model_root = '../../pathclip_eval/model_zoo/CTransPath/ctranspath.pth'
-        ctp_model = ctranspath()
-        ctp_model.head = nn.Identity()
-        state_dict = torch.load(pretrained_image, map_location="cpu")
-        # state_dict = clean_state_dict_clip(state_dict)
-        missing_keys, unexpected_keys = ctp_model.load_state_dict(state_dict['model'], strict=False)
-        print('load ctp model, missing keys: ', missing_keys)
-        print('load ctp model, unexpected keys: ', unexpected_keys)
-
-        model.visual = ctp_model
-        model.visual.image_size = 224
-        logging.info('Load pretrained vision encoder success from CTransPath.')
-        
-    elif pretrained_image and image_encoder == 'res_ssl':
-        # model_root = '../../pathclip_eval/model_zoo/cvpr23_benchmark/mocov2_rn50_ep200.torch'
-        ssl_model = ResNetTrunk(Bottleneck, [3, 4, 6, 3])
-        state_dict = torch.load(pretrained_image, map_location="cpu")
-        missing_keys, unexpected_keys = ssl_model.load_state_dict(state_dict, strict=False)
-        print('load res_ssl model, missing keys: ', missing_keys)
-        print('load res_ssl model, unexpected keys: ', unexpected_keys)
-        
-        model.visual = ssl_model
-        model.visual.image_size = 224
-        logging.info('Load pretrained vision encoder success from res_ssl.')
-        
-    elif pretrained_image and image_encoder == 'res_pmc':
-        # model_root = '../../pathclip_eval/model_zoo/pmcclip/checkpoint.pt'
-        pmcclip_model = PMC_CLIP(device='cpu')
-        ckpt = torch.load(pretrained_image, map_location="cpu")
-        state_dict = ckpt['state_dict']
-        from collections import OrderedDict
-        new_state_dict = OrderedDict()
-        for k,v in state_dict.items():
-            newk = k
-            if k.startswith('module'):
-                newk = k[7:]
-            new_state_dict[newk] = v
-            
-        missing_keys, unexpected_keys = pmcclip_model.load_state_dict(new_state_dict, strict=False)
-        print('load res_pmc model, missing keys: ', missing_keys)
-        print('load res_pmc model, unexpected keys: ', unexpected_keys)
-        
-        model.visual = pmcclip_model.visual
-        model.visual.image_size = 224
-        logging.info('Load pretrained vision encoder success from res_ssl.')
-        
     model.logit_scale = nn.Parameter(torch.ones([]) * np.log(1 / logit_scale))
     model.to(device)
-
 
     if precision in ("fp16", "bf16"):
         dtype = torch.float16 if 'fp16' in precision else torch.bfloat16
@@ -358,40 +242,11 @@ def create_model(
     else:
         model.to(device=device)
 
-    # pretrained_loaded = False
-    # if pretrained:
-    #     checkpoint_path = ''
-    #     pretrained_cfg = get_pretrained_cfg(model_name, pretrained)
-    #     if pretrained_cfg:
-    #         checkpoint_path = download_pretrained(pretrained_cfg, cache_dir=cache_dir)
-    #     elif os.path.exists(pretrained):
-    #         checkpoint_path = pretrained
-
-    #     if checkpoint_path:
-    #         logging.info(f'Loading pretrained {model_name} weights ({pretrained}).')
-    #         load_checkpoint(model, checkpoint_path)
-    #     else:
-    #         error_str = (
-    #             f'Pretrained weights ({pretrained}) not found for model {model_name}.'
-    #             f'Available pretrained tags ({list_pretrained_tags_by_model(model_name)}.')
-    #         logging.warning(error_str)
-    #         raise RuntimeError(error_str)
-    #     pretrained_loaded = True
-    # elif has_hf_hub_prefix:
-    #     logging.info(f'Loading pretrained {model_name} weights ({pretrained}).')
-    #     load_checkpoint(model, checkpoint_path)
-    #     pretrained_loaded = True
-
-    # if require_pretrained and not pretrained_loaded:
-    #     # callers of create_model_from_pretrained always expect pretrained weights
-    #     raise RuntimeError(
-    #         f'Pretrained weights were required for (model: {model_name}, pretrained: {pretrained}) but not loaded.')
-
     # set image / mean metadata from pretrained_cfg if available, or use default
-    if pretrained_image and image_encoder == 'ctp':
+    if pretrained_image and image_encoder in ['ctp','uni','prov']:
         model.visual.image_mean = (0.485, 0.456, 0.406)
         model.visual.image_std = (0.229, 0.224, 0.225)
-    if pretrained_image and image_encoder == 'res_ssl':
+    elif pretrained_image and image_encoder == 'res_ssl':
         model.visual.image_mean = (0.70322989, 0.53606487, 0.66096631)
         model.visual.image_std = (0.21716536, 0.26081574, 0.20723464)
     else:
@@ -415,38 +270,33 @@ def create_model(
 
 def create_loss(args,cfg):
 
-    return KepLoss(
-        local_loss=args.local_loss,
-        gather_with_grad=args.gather_with_grad,
-        cache_labels=True,
-        rank=args.rank,
-        world_size=args.world_size,
-        use_horovod=args.horovod,
-        loss_weight= cfg.LOSS.WEIGHT,
-    )
+    if cfg.MODEL.TYPE == 'hierarchy_metric':
+        return HyMetricLoss(loss_type=cfg.LOSS.SUBTYPE,caption_num=cfg.DATALOADER.CAPTION_NUM, knowledge_root = cfg.DATASET.KNOWLEDGE_FILE)
+    else:
+        return ClipLoss(
+            local_loss=args.local_loss,
+            gather_with_grad=args.gather_with_grad,
+            cache_labels=True,
+            rank=args.rank,
+            world_size=args.world_size,
+            use_horovod=args.horovod,
+        )
 
 
 def create_model_and_transforms(
         model_name: str,
         logit_scale,
-        # pretrained: Optional[str] = None,
-        # knowledge_guidance: bool = False,
         text_encoder: Optional[str] = None,
+        test_emb_dim: int = 512,
         bert_pretrain: Optional[str] = None,
         image_encoder: str = None,
         pretrained_image: str = None,
         knowledge_bert: Optional[str] = None,
-        knowledge_distillation:Optional[str] = None,
         visual_embedding_head: bool = False,
         text_embedding_head: bool = False,
         precision: str = 'fp32',
         device: Union[str, torch.device] = 'cpu',
         jit: bool = False,
-        # force_quick_gelu: bool = False,
-        # force_custom_text: bool = False,
-        # force_patch_dropout: Optional[float] = None,
-        # force_image_size: Optional[Union[int, Tuple[int, int]]] = None,
-        # pretrained_hf: bool = True,
         image_mean: Optional[Tuple[float, ...]] = None,
         image_std: Optional[Tuple[float, ...]] = None,
         aug_cfg: Optional[Union[Dict[str, Any], AugmentationCfg]] = None,
@@ -457,11 +307,11 @@ def create_model_and_transforms(
         model_name,
         logit_scale,
         text_encoder,
+        test_emb_dim,
         bert_pretrain,
         image_encoder,
         pretrained_image,
         knowledge_bert,
-        knowledge_distillation,
         visual_embedding_head,
         text_embedding_head,
         precision=precision,
@@ -470,10 +320,6 @@ def create_model_and_transforms(
         cache_dir=cache_dir,
         output_dict=output_dict,
     )
-    # if text_encoder == 'clip':
-    #     model_visual = model.clip.visual
-    # elif text_encoder in ['bert','biomed']:
-    #     model_visual = model.visual
     image_mean = image_mean or getattr(model.visual, 'image_mean', None)
     image_std = image_std or getattr(model.visual, 'image_std', None)
     preprocess_train = image_transform(
