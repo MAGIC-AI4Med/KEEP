@@ -74,8 +74,8 @@ python zeroshot_subtyping_WSI.py
 ```
 
 
-## Dataset Structuring
-We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. You can download the fine-tuned Yolov8 model directly from [PathDetector](https://drive.google.com/file/d/1CtQdGTrmMokUYaMczW1BsEr2BT8YkHZ2/view?usp=sharing) .
+## Pathology Image Detection
+We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. The annotations can be found in [PathAnno](https://huggingface.co/datasets/Loie/PathologyImageDetection-ManualAnnotation). Alternatively, you can download the fine-tuned Yolov8 model directly from [PathDetector](https://drive.google.com/file/d/1CtQdGTrmMokUYaMczW1BsEr2BT8YkHZ2/view?usp=sharing).
 
 ```python
 from ultralytics import YOLO
