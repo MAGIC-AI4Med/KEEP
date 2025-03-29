@@ -1,20 +1,19 @@
 DATASET:
   IMG_DIR: 'Path/to/image/dir' 
-  TRAIN_DATA: 'Path/to/semantic/groups/.json'
+  TRAIN_DATA: './train_data/example_pathology_vl_semantic_groups.json'
   TYPE: 'json'
-  KNOWLEDGE_FILE: 'Path/to/knowledge_graph.json' 
+  KNOWLEDGE_FILE: './train_data/knowledge_graph_example.json' 
   ZEROSHOT_CLS_IMDIR: 'Path/to/evaluation/cls_dataset/'
-  ZEROSHOT_CLS: 'Path/to/evaluation/cls_dataset/data_info.csv'
-  ZEROSHOT_CLS_PROMPTS: 'Path/to/evaluation/cls_dataset/data_prompts.json'
+  ZEROSHOT_CLS: './test_data/Bach_test.csv'
+  ZEROSHOT_CLS_PROMPTS: './test_data/Bach_prompt.json'
   ZEROSHOT_RET_IMDIR: 'Path/to/evaluation/retrieval_datasets/'
-  ZEROSHOT_RET: 'Path/to/evaluation/retrieval_datasets/retrieval.csv'
+  ZEROSHOT_RET: './test_data/Arch_pubmed_test.csv'
   PRELOAD_DATA: False 
   LABEL_CAP: 'both'
 
 MODEL:
   BERT_PRETRAIN: 'Path/to/bert/pretrain/model/'
   KNOWLEDGE_BERT: 'Path/to/knowledge/encoder/*.pt'
-  KNOWLEDGE_DISTILLATION: None 
   RESUME: None
   NAME: 'ViT-L-16'
   IMAGE_ENCODER: 'uni'
