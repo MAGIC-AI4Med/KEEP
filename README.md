@@ -67,7 +67,7 @@ Alternatively, you can download the model weights from Google Drive with the lin
 We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) and put the folder "h5_files" in "WSI_evaluation". In this part, you only need one 4090 GPU.
 
 ```bash
-cd ./WSI_evaluation
+cd WSI_evaluation
 python zeroshot_segmentation_WSI.py
 python zeroshot_detection_WSI.py
 python zeroshot_subtyping_WSI.py
@@ -99,18 +99,17 @@ For disease knowledge encoding, we train the knowledge encoder in a way similar 
 create a conda environment and install the dependencies:
 
 ```bash
+cd training
 conda create -n keep python=3.8 -y
 conda activate keep
 pip install -r requirements.txt
 ```
 
 ### Training
-If you need to retrain the model, you could refer to the following code and modify the relevant parameters. In this part, we only use one A100 GPU.
+If you need to retrain the model, you could refer to the following code and modify the relevant parameters in `training/configs/keep_config.yml`. In this part, we only use one A100 GPU.
 
 ```bash
 cd training
-
-CUDA_VISIBLE_DEVICES=0
 python -m path_training.main
 ```
 
