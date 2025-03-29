@@ -25,7 +25,6 @@ except ImportError:
 
 sys.path.append("./")
 from path_open_clip import create_model_and_transforms, trace_model, get_tokenizer, create_loss
-# from path_training.data_proc import get_data, preload_dataset
 from path_training.data_proc_group import get_data, preload_dataset
 from path_training.distributed import is_master, init_distributed_device, broadcast_object
 from path_training.logger import setup_logging
@@ -224,7 +223,6 @@ def main(input_args):
         cfg.MODEL.IMAGE_ENCODER,
         cfg.MODEL.PRETRAINED_IMAGE,
         cfg.MODEL.KNOWLEDGE_BERT,
-        cfg.MODEL.KNOWLEDGE_DISTILLATION,
         cfg.MODEL.VISUAL_EMBEDDING_HEAD,
         cfg.MODEL.TEXT_EMBEDDING_HEAD,
         precision=cfg.MODEL.PRECISION,
@@ -273,7 +271,7 @@ def main(input_args):
         model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[device], **ddp_args)
     
     # get tokenizer
-    tokenizer=get_tokenizer(cfg.MODEL.NAME, cfg.MODEL.BERT_PRETRAIN, cfg.MODEL.TEXT_ENCODER, cfg.MODEL.KNOWLEDGE_GUIDANCE)
+    tokenizer=get_tokenizer(cfg.MODEL.NAME, cfg.MODEL.BERT_PRETRAIN, cfg.MODEL.TEXT_ENCODER)
 
     # create optimizer and scaler
     optimizer = None
@@ -396,13 +394,6 @@ def main(input_args):
         return
 
     loss = create_loss(args,cfg)
-
-    # if cfg.MODEL.RESUME is not None:
-    #     test_results = evaluate(model, data, tokenizer, start_epoch+1, args, cfg, writer)
-    #     all_test_results = [test_results['zeroshot-cls-WF1-median']]
-    # else:
-    #     all_test_results = [-1]
-    # print('best_wF1 so far: %.3f'%(max(all_test_results)))
     
     freezescheduler = FreezeScheduler()
     for epoch in range(start_epoch, cfg.SOLVER.EPOCHS):
@@ -427,22 +418,6 @@ def main(input_args):
 
         if any(v in data for v in ('val', 'zeroshot_cls', 'zeroshot_ret')):
             test_results = evaluate(model, data, tokenizer, completed_epoch, args, cfg, writer)
-
-        # if 'zeroshot-cls-WF1-median' in test_results:
-        #     if test_results['zeroshot-cls-WF1-median'] > max(all_test_results) and cfg.SAVE.SAVE_BEST:
-        #         checkpoint_dict = {
-        #         "epoch": completed_epoch,
-        #         "name": cfg.SAVE.NAME,
-        #         "state_dict": model.state_dict(),
-        #         "optimizer": optimizer.state_dict(),
-        #         }
-        #         if scaler is not None:
-        #             checkpoint_dict["scaler"] = scaler.state_dict()
-        #             torch.save(
-        #                 checkpoint_dict,
-        #                 os.path.join(args.checkpoint_path, "epoch_best.pt"),
-        #             )
-        #     all_test_results.append(test_results['zeroshot-cls-WF1-median'])
 
         # Saving checkpoints.
         if args.save_logs:

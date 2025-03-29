@@ -67,68 +67,6 @@ sub_disease_nodes = {'DOID:0050117':'disease by infectious agent',
                   'DOID:0080015':'physical disorder',
                   'DOID:225':'syndrome'}
 
-part1_text_prompt = {
-    'Benign':['breast non-malignant benign tissue', 'breast benign tissue', 'non-malignant benign tissue of breast'],
-    'InSitu':['breast malignant in-situ carcinoma', 'breast in-situ carcinoma', 'malignant carcinoma in-situ of breast'], 
-    'Invasive':['breast malignant invasive carcinoma', 'breast invasive carcinoma', 'invasive carcinoma of breast'], 
-    'Normal':['breast normal breast tissue', 'normal breast tissue', 'breast normal tissue', 'breast non-cancerous tissue'],
-    'adenosis':['adenosis', 'breast adenosis', 'adenosis of breast'],
-    'fibroadenoma':['fibroadenoma', 'cellular fibroadenoma', 'fibroadenoma of breast'],
-    'phyllodes_tumor': ['phyllodes tumor', 'benign cystosarcoma phyllodes', 'benign phyllodes neoplasm of the breast'],
-    'tubular_adenoma': ['tubular adenoma', 'breast tubular adenoma', 'tubular adenoma of the breast'],
-    'ductal_carcinoma': ['ductal carcinoma', 'breast ductal carcinoma', 'invasive ductal carcinoma'],
-    'lobular_carcinoma': ['lobular carcinoma','breast lobular carcinoma', 'invasive lobular carcinoma'],
-    'mucinous_carcinoma': ['mucinous carcinoma', 'breast mucinous carcinoma', 'invasive mucinous breast carcinoma'],
-    'papillary_carcinoma': ['papillary carcinoma', 'breast papillary carcinoma', 'breast solid papillary carcinoma'],
-    'blood':['red blood cells', 'red blood corpuscles', 'red cells', 'erythroid cells'], 
-    'cancer':['renal cancer', 'renal tumor', 'renal neoplasm', 'renal carcinoma'], 
-    'normal':['non-tumor','normal tissue','non-cancerous tissue'], 
-    'other':['torn adipose necrotic tissue', 'torn adipose tissue, necrosis', 'adipose necrotic tissue'], 
-    'stroma':['muscle fibrous stroma blood vessels', 'blood vessels, muscle fibrous stroma', 'muscle fibers and blood vessels in stroma']
-}
-
-part2_text_prompt = {
-    'lung_aca':['lung adenocarcinoma','adenocarcinoma of the lung','lung cancer, adenocarcinoma'], 
-    'lung_n':['benign lung', 'benign lung tissues', 'non-malignant lung tissue'], 
-    'lung_scc':['lung squamous cell carcinoma', 'squamous-cell carcinoma of the lung','squamous cell lung cancer'],
-    'NC':['non-cancerous tissue','non-cancerous prostate tissue','benign tissue','benign glands','benign prostate tissue','benign prostate glands'],
-    'G3':['gleason grade three', 'gleason pattern three', 'prostate cancer, gleason grade three', 'prostate cancer, gleason pattern three', 'prostate adenocarcinoma, well-differentiated', 'well-differentiated prostatic adenocarcinoma'],
-    'G4':['gleason grade four', 'gleason pattern four', 'prostate cancer, gleason grade four', 'prostate cancer, gleason pattern four', 'prostate adenocarcinoma, moderately differentiated', 'moderately differentiated prostatic adenocarcinoma'],
-    'G5':['gleason grade five', 'gleason pattern five', 'prostate cancer, gleason grade five', 'prostate cancer, gleason pattern five', 'prostate adenocarcinoma, poorly differentiated', 'poorly differentiated prostatic adenocarcinoma'],
-    'Tumor':['prostatic adenocarcinoma', 'adenocarcinoma', 'prostate cancer', 'tumor tissue', 'cancerous tissue']
-}
-
-part3_text_prompt = {
-    'necrosis':['necrosis', 'necrotic tissue', 'necrotic cells'], 
-    'skeletal':['skeletal muscle', 'skeletal muscle cells', 'skeletal muscle tissue'], 
-    'sweatglands':['eccrine sweat glands', 'merocrine glands', 'skin eccrine sweat glands'],
-    'vessel':['vessels','blood vessels', 'vessel'], 
-    'elastosis':['elastosis','elastosis of skin', 'skin elastosis'], 
-    'chondraltissue':['chondral tissue', 'chondral tissue of skin', 'skin chondral tissue'], 
-    'hairfollicle':['hair follicle', 'hair follicle of skin', 'skin hair follicle'],
-    'epidermis':['epidermis', 'skin epidermis', 'epidermal cells'], 
-    'nerves':['nerves', 'nerve fibers', 'nerve axons'], 
-    'subcutis':['subcutis','subcutaneous tissue','skin subcutis','hypodermis','hypoderm'], 
-    'dermis':['dermis','skin dermis', 'corium','skin corium'], 
-    'sebaceousglands':['sebaceous','sebaceous gland','skin sebaceous'],
-    'sqcc':['squamous-cell carcinoma','cutaneous squamous-cell carcinoma','squamous-cell carcinoma of the skin','squamous-cell skin cancer'], 
-    'melanoma':['melanoma in-situ','malignant melanoma', 'cutaneous melanoma'],
-    'bcc':['basal-cell carcinoma','basal-cell cancer','basal-cell tumor'], 
-    'naevus':['naevus','mole','skin nevus'],
-    'TUMOR':['vital tumor tissue', 'vital tumor cells', 'cancerous tissue', 'cancerous cells'],
-    'REGR_TU':['regression areas', 'regression region', 'the areas of regression'],
-    'SH_OES':['oesophageal mucosa', 'esophageal mucosa', 'oesophageal mucosa tissue', 'esophageal mucosa cells'],
-    'SH_MAG':['gastric mucosa', 'the mucous membrane layer of the stomach', 'gastric mucosa tissue'],
-    'LAM_PROP':['lamina propria mucosae','lamina propria', 'lamina propria mucosae tissue'],
-    'SUBMUC':['submucosa','tela submucosa','the layer beneath the mucosa'],
-    'SUB_GL':['submucosal glands', 'submucosal glands tissue', 'submucosal glands cells'],
-    'MUSC_MUC':['lamina muscularis mucosae', 'muscularis mucosae', 'a thin layer of muscle of the gastrointestinal tract'],
-    'MUSC_PROP':['muscularis propria', 'muscular layer', 'muscular coat'],
-    'ADVENT':['adventitial tissue', 'the outer layer of fibrous connective tissue', 'adventitial cells'],
-    'ULCUS':['areas of ulceration', 'region of ulceration', 'ulceration areas']
-}
-
-
 def get_random_hierarchy(all_do_nodes,sub_disease_nodes,node_id, use_syn = False):    
     if node_id == 'normal':
         return ['normal tissue', 'non-cancerous tissue', 'non-tumor tissue']
@@ -178,16 +116,6 @@ def get_hierarchy_cap(all_do_nodes,sub_disease_nodes,node_id, use_syn = False, m
         else:
             hierarchy_cap = hy_cap
     return hierarchy_cap
-
-# def group_with_label(group_cap_img_label):
-#     if 'captions' not in group_cap_img_label:
-#         return False
-    
-#     for k,v in group_cap_img_label['captions'].items():
-#         if len(v['labels']) > 0:
-#             return True
-    
-#     return False
 
 
 class JsonDataset(Dataset):
@@ -299,12 +227,6 @@ class JsonDataset(Dataset):
         img_name = img_list[0]
         
         if self.knowledge_nodes:
-            # if len(self.group_cap_img_label[self.repeated_groups[idx]]['labels']) > 0:
-            #     cap_label = self.group_cap_img_label[self.repeated_groups[idx]]['labels'][0]
-            #     hierarchy_cap = get_hierarchy_cap(self.knowledge_nodes, sub_disease_nodes, cap_label, use_syn=True,mixed=True)
-            #     text = text if random.random() > 0.5 else hierarchy_cap
-            # else:
-            #     cap_label = 'unknown'
             label_list = list(self.group_cap_img_label[self.repeated_groups[idx]]['labels'].keys())
             random.shuffle(label_list)
             cap_label = label_list[0]
@@ -313,33 +235,18 @@ class JsonDataset(Dataset):
                 text = text if random.randint(0,1) == 1 else hierarchy_cap
         
         if self.preload_alldata is not None:
-            # image = np.asarray(bytearray(self.preload_alldata['imgs'][self.images[idx]]), dtype="uint8")
-            # image = cv2.imdecode(image, cv2.IMREAD_COLOR)
-            # images = self.transforms(image)
             if img_name in self.preload_alldata:
                 img = self.preload_alldata[img_name]
             else:
                 img = Image.open(os.path.join(str(self.img_dir), str(img_name)))
         else:
-            # img_name = str(self.images[idx]).split('.')[0] + '.npy'
-            if self.repeated_groups[idx].startswith('webpath_group'):
-                # print('sample webpath!!!!!!!!')
-                img_root = '/mnt/hwfile/medai/zhouxiao/data/pathology/test_datasets/retrieval/Webpath/images_512'
-            elif self.repeated_groups[idx].startswith('pathpair_group'):
-                # print('sample pathpair!!!!!!!!')
-                img_root = '/mnt/hwfile/medai/zhouxiao/data/pathology/test_datasets/retrieval/Pathpair/Pathpair512_update'
-            else:
-                img_root = str(self.img_dir)
+            img_root = str(self.img_dir)
             
             img_path = os.path.join(img_root, str(img_name))
-            if not os.path.exists(img_path):
-                test = 1
-            # img = Image.open(img_name)
             try:
                 img = Image.open(os.path.join(img_root, str(img_name)))
             except:
                 img = Image.open(os.path.join(img_root, str(img_name).split('-')[0],str(img_name)))
-            # img = Image.fromarray(img.astype('uint8'))
         
         image = self.transforms(img)
         
@@ -375,14 +282,7 @@ def preload_dataset(cfg):
             img = cv2.imread(img_dir)
             img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
             
-            # img = Image.open(img_dir).convert('RGB').load()
-            # img = cv2.imread(img_dir)
-            # img_npy = np.load(img_dir)
             preload_img_data[image_list[idx]] = img
-            # with open(img_dir, 'rb') as f:
-            #     byte_img = f.read()
-            #     all_data['imgs'][image_list[idx]] = byte_img
-            # f.close()
 
     print(r'The number of images is: %d '%(len(preload_img_data)))
     return preload_img_data
@@ -463,48 +363,6 @@ class CsvDataset(Dataset):
         
         return images, texts
 
-
-class ContinueDataset(Dataset):
-    def __init__(self, input_filename, part_num, transforms, sep=',', is_train = True):
-        logging.debug(f'Loading csv data from {input_filename}.')
-
-        df = pd.read_csv(input_filename, sep=sep, engine='python')
-
-        self.is_train = is_train
-        self.images = df['image_name'].tolist()
-        self.labels = df['image_label'].tolist()
-        self.img_paths = df['image_root'].tolist()
-        self.part_num = part_num
-        self.transforms = transforms
-        logging.debug('Done loading data.')
-
-    def __len__(self):
-        return len(self.images)
-
-    def __getitem__(self, idx):
-        # img_name = str(self.images[idx]).split('.')[0] + '.npy'
-        img_path = os.path.join(str(self.img_paths[idx]), str(self.images[idx]))
-        
-        if not os.path.exists(img_path):
-            test = 1
-        img = Image.open(img_path)
-        image = self.transforms(img)
-        
-        label = self.labels[idx]
-        
-        if self.part_num == 1:
-            rand_idx = random.randint(0,len(part1_text_prompt[label])-1)
-            text = 'a histopathology image of ' + part1_text_prompt[label][rand_idx]
-        elif self.part_num == 2:
-            rand_idx = random.randint(0,len(part2_text_prompt[label])-1)
-            text = 'a histopathology image of ' + part2_text_prompt[label][rand_idx]
-        elif self.part_num == 3:
-            rand_idx = random.randint(0,len(part3_text_prompt[label])-1)
-            text = 'a histopathology image of ' + part3_text_prompt[label][rand_idx]
-        
-        return image, text
-
-
 class SharedEpoch:
     def __init__(self, epoch: int = 0):
         self.shared_epoch = Value('i', epoch)
@@ -561,36 +419,6 @@ def get_csv_dataset(args, cfg, preprocess_fn, is_train):
     dataloader.num_batches = len(dataloader)
 
     return DataInfo(dataset, dataloader, sampler)
-
-def get_continue_dataset(args, cfg, preprocess_fn, is_train):
-    input_filename = cfg.DATASET.TRAIN_DATA if is_train else cfg.DATASET.VAL_DATA
-    assert input_filename
-    dataset = ContinueDataset(
-        input_filename,
-        cfg.DATASET.PART_NUM,
-        preprocess_fn,
-        sep=cfg.DATASET.CSV_SEPARATOR,
-        is_train = is_train,
-    )
-    num_samples = len(dataset)
-    sampler = DistributedSampler(dataset) if args.distributed and is_train else None
-    shuffle = is_train and sampler is None
-
-    dataloader = DataLoader(
-        dataset,
-        batch_size=cfg.DATALOADER.BATCH_SIZE,
-        shuffle=shuffle,
-        num_workers=cfg.DATALOADER.WORKORS,
-        pin_memory=True,
-        sampler=sampler,
-        drop_last=is_train,
-        
-    )
-    dataloader.num_samples = num_samples
-    dataloader.num_batches = len(dataloader)
-
-    return DataInfo(dataset, dataloader, sampler)
-
 
 def get_json_dataset(args, cfg, preprocess_fn, is_train):
     input_filename = cfg.DATASET.TRAIN_DATA if is_train else cfg.DATASET.VAL_DATA
@@ -688,12 +516,6 @@ def get_data(args, cfg, preprocess_fns):
     if cfg.DATASET.ZEROSHOT_PO:
         data['zeroshot_po'] = get_zeroshot_dataset(cfg, preprocess_val, 'po_retrieval')
 
-    # if args.imagenet_val is not None:
-    #     data["imagenet-val"] = get_imagenet(args, preprocess_fns, "val")
-
-    # if args.imagenet_v2 is not None:
-    #     data["imagenet-v2"] = get_imagenet(args, preprocess_fns, "v2")
-
     return data
 
 
@@ -706,8 +528,6 @@ _SAMPLE_SHUFFLE_INITIAL = 1000
 def get_dataset_fn(data_path, dataset_type):
     if dataset_type == "csv":
         return get_csv_dataset
-    elif dataset_type == "continue":
-        return get_continue_dataset
     elif dataset_type == "json":
         return get_json_dataset
     elif dataset_type == "auto":
