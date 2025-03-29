@@ -63,8 +63,8 @@ text_feature = model.encode_text(token_input)
 Alternatively, you can download the model weights from Google Drive with the link: [model_weights](https://drive.google.com/drive/folders/1warXpxtb4PoL_fQPyT1qsbSAdWjCRy04?usp=sharing) for easy inference.
 
 
-## Evaluation on WSIs 
-We provide a ```.py``` file for fast evaluation on WSIs as follows. You need to download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) and put the folder "h5_files" in "WSI_evaluation". In this part, you only need one 4090 GPU.
+## Evaluation on WSI-level Tasks 
+We provide a ```.py``` file for fast evaluation on WSIs, including cancer region segmentation, cancer detection, and cancer subtyping. Before evaluation, you need to follow [CLAM](https://github.com/mahmoodlab/CLAM) to extract patch-level features for the tested WSI and save them as h5 files. For instance, you can download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) and put the folder "h5_files" in "WSI_evaluation". In this part, you only need one 4090 GPU.
 
 ```bash
 cd WSI_evaluation
