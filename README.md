@@ -12,6 +12,8 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 
 ## News
+**[03/28/2025]**: Codes for KEEP training are now updated. 
+
 **[03/27/2025]**: Codes for single WSI inference on different tasks are now available. 
 
 **[12/24/2024]**: Model weights for easy inference are now available on [Huggingface](https://huggingface.co/Astaxanthin/KEEP). 
