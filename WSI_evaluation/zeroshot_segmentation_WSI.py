@@ -10,7 +10,7 @@ import torch.nn.functional as F
 import random
 
 
-test_data_name = 'camelyon_tumor'
+## test data comes from CAMELYON16
 
 prompt_file = './prompts/other_camelyon_tumor_prompts.json'
 h5_path = './h5_files/camelyon_examples/test_040.h5'
