@@ -2,7 +2,7 @@
 
 The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"**
 
-[Preprint](https://arxiv.org/abs/2412.13126) | [Hugging Face](https://huggingface.co/Astaxanthin/KEEP) | [Webpage](https://loiesun.github.io/keep/) | [Cite](#reference)
+[Preprint](https://arxiv.org/abs/2412.13126) | [Hugging Face](https://huggingface.co/Astaxanthin/KEEP) | [Cite](#reference)
 
 ---
 
