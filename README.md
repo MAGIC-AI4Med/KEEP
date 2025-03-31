@@ -77,7 +77,7 @@ python zeroshot_subtyping_WSI.py
 
 
 ## Pathology Image Detection
-We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. The annotations can be found in [KEEP_datasets](https://huggingface.co/datasets/Loie/PathologyImageDetection-ManualAnnotation). Alternatively, you can download the fine-tuned Yolov8 model weights directly from [PathDetector](https://drive.google.com/file/d/1CtQdGTrmMokUYaMczW1BsEr2BT8YkHZ2/view?usp=sharing).
+We manually annotate 1,000 noisy pathology images to fine-tune Yolov8. The annotations can be found in [KEEP_dataset](https://huggingface.co/datasets/Loie/KEEP_dataset). Alternatively, you can download the fine-tuned Yolov8 model weights directly from [PathDetector](https://drive.google.com/file/d/1CtQdGTrmMokUYaMczW1BsEr2BT8YkHZ2/view?usp=sharing).
 
 ```python
 from ultralytics import YOLO
@@ -90,7 +90,7 @@ results = model(img_path)  # detect pathology regions on an image
 
 
 ## Knowledge Construction and Encoding
-For knowledge graph construction, we download the knowledge structure from  [Disease Ontology (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**, which can also be downloaded from [KEEP_datasets](https://huggingface.co/datasets/Loie/PathologyImageDetection-ManualAnnotation) upon requests.
+For knowledge graph construction, we download the knowledge structure from  [Disease Ontology (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**, which can also be downloaded from [KEEP_dataset](https://huggingface.co/datasets/Loie/KEEP_dataset) upon requests.
 
 For disease knowledge encoding, we train the knowledge encoder in a way similar to our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You can find more detailed information in the repository. In this part, we use 4 A100 GPUs.
 
@@ -108,7 +108,7 @@ pip install -r requirements.txt
 ```
 
 ### Training
-Before training, you need to collect pathology image-text pairs from [OpenPath](https://drive.google.com/drive/folders/1b5UT8BzUphkHZavRG-fmiyY9JWYIWZER) and [Quilt1M](https://zenodo.org/record/8239942), with seqcequent filtering and clustering pathology image-text pairs into semantic groups. The semantic groups can also be acquired from [KEEP_datasets](https://huggingface.co/datasets/Loie/PathologyImageDetection-ManualAnnotation). During training, you could refer to the following code and modify the relevant parameters in `training/configs/keep_config.yml`. In this part, we only use one A100 GPU.
+Before training, you need to collect pathology image-text pairs from [OpenPath](https://drive.google.com/drive/folders/1b5UT8BzUphkHZavRG-fmiyY9JWYIWZER) and [Quilt1M](https://zenodo.org/record/8239942), with seqcequent filtering and clustering pathology image-text pairs into semantic groups. The semantic groups can also be acquired from [KEEP_dataset](https://huggingface.co/datasets/Loie/KEEP_dataset). During training, you could refer to the following code and modify the relevant parameters in `training/configs/keep_config.yml`. In this part, we only use one A100 GPU.
 
 ```bash
 cd training
