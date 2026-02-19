@@ -13,9 +13,9 @@
 
 ## News
 
-**[02/20/2026]**: Our paper has been published in *Cancer Cell*.
+**[02/20/2026]**: Our paper has been published in *Cancer Cell*. <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="18"/> <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="18"/>
 
-**[01/20/2026]**: A pediatric rare cancer pathology WSI dataset has been released on [Huggingface](https://huggingface.co/datasets/Firehdx233/KidRare/tree/main). 
+**[01/20/2026]**: A pediatric rare cancer pathology WSI dataset has been released on [Huggingface](https://huggingface.co/datasets/Firehdx233/KidRare/tree/main). <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="18"/> <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="18"/>
 
 **[03/31/2025]**: Datasets, including manual annotation of pathology images, disease knowledge graph, and pathology image-text semantic groups for KEEP training, are now released on [Huggingface]([https://huggingface.co/datasets/Firehdx233/KidRare/tree/main](https://huggingface.co/datasets/Loie/KEEP_dataset)). 
 
