@@ -1,8 +1,8 @@
 # KEEP (**K**nowledg**E**-**E**nhanced **P**athology)
 
-The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"**
+[Cancer Cell] The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"**
 
-[Preprint](https://arxiv.org/abs/2412.13126) | [Hugging Face](https://huggingface.co/Astaxanthin/KEEP) | [Website](https://loiesun.github.io/keep/) | [Cite](#reference)
+[Paper](https://www.cell.com/cancer-cell/fulltext/S1535-6108(26)00058-9) | [Hugging Face](https://huggingface.co/Astaxanthin/KEEP) | [Website](https://loiesun.github.io/keep/) | [Cite](#reference)
 
 ---
 
@@ -12,7 +12,12 @@ The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundat
 
 
 ## News
-**[03/31/2025]**: Datasets, including manual annotation of pathology images, disease knowledge graph, and pathology image-text semantic groups for KEEP training are now released. 
+
+**[02/20/2026]**: Our paper has been published in *Cancer Cell*.
+
+**[01/20/2026]**: A pediatric rare cancer pathology WSI dataset has been released on [Huggingface](https://huggingface.co/datasets/Firehdx233/KidRare/tree/main). 
+
+**[03/31/2025]**: Datasets, including manual annotation of pathology images, disease knowledge graph, and pathology image-text semantic groups for KEEP training, are now released on [Huggingface]([https://huggingface.co/datasets/Firehdx233/KidRare/tree/main](https://huggingface.co/datasets/Loie/KEEP_dataset)). 
 
 **[03/28/2025]**: Codes for KEEP training are now updated. 
 
