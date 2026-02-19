@@ -8,7 +8,7 @@ from PIL import Image
 
 class KEEPConfig(PretrainedConfig):
     model_type = "keep"  # 
-
+    
     def __init__(
         self,
         vision_config=None,  # Vision Encoder
@@ -102,3 +102,4 @@ img_feature = model.encode_image(img_input)
 text_feature = model.encode_text(token_input)
 
 print(img_feature@text_feature.T)
+
