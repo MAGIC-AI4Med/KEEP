@@ -71,7 +71,7 @@ Alternatively, you can download the model weights from Google Drive with the lin
 
 
 ## Evaluation on WSI-level Tasks 
-We provide a ```.py``` file for fast evaluation on WSIs, including cancer region segmentation, cancer detection, and cancer subtyping. We release a pathology WSI dataset for pediatric rare cancer diagnosis on [Huggingface](https://huggingface.co/datasets/Firehdx233/KidRare/tree/main), and the subtype label for each WSI can be found in ''. Before evaluation, you need to follow [CLAM](https://github.com/mahmoodlab/CLAM) to extract patch-level features for the tested WSI and save them as h5 files. For instance, you can download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) and put the folder "h5_files" in "WSI_evaluation". In this part, you only need one 4090 GPU.
+We provide a ```.py``` file for fast evaluation on WSIs, including cancer region segmentation, cancer detection, and cancer subtyping. We release a pathology WSI dataset for pediatric rare cancer diagnosis on [Huggingface](https://huggingface.co/datasets/Firehdx233/KidRare/tree/main), and the subtype label for each WSI can be found in `WSI_evaluation/kidrare_label`. Before evaluation, you need to follow [CLAM](https://github.com/mahmoodlab/CLAM) to extract patch-level features for the tested WSI and save them as h5 files. For instance, you can download exemplary h5 files from [KEEP_release](https://drive.google.com/drive/folders/1rzis8KJw4fdOyy2H3awYfAnAgByVXDLD?usp=sharing) and put the folder "h5_files" in "WSI_evaluation". In this part, you only need one 4090 GPU.
 
 ```bash
 cd WSI_evaluation
