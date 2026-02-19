@@ -156,8 +156,18 @@ The project was built on top of amazing repositories such as [MI-Zero](https://g
 ## Reference
 If you find our work useful in your research, please consider citing our [paper](https://arxiv.org/abs/2412.13126):
 
-
-Zhou, X., Sun, L., He, D., Guan, W., Wang, G., Wang, R., Wang, L., Yuan, X., Sun, X., Zhang, Y., Sun, K., Wang, Y., Xie, W., n.d. Knowledge-enhanced pretraining for vision-language pathology foundation model on cancer diagnosis. Cancer Cell. https://doi.org/10.1016/j.ccell.2026.01.019
+```
+@article{ZHOU2026,
+title = {Knowledge-enhanced pretraining for vision-language pathology foundation model on cancer diagnosis},
+journal = {Cancer Cell},
+year = {2026},
+issn = {1535-6108},
+doi = {https://doi.org/10.1016/j.ccell.2026.01.019},
+url = {https://www.sciencedirect.com/science/article/pii/S1535610826000589},
+author = {Xiao Zhou and Luoyi Sun and Dexuan He and Wenbin Guan and Ge Wang and Ruifen Wang and Lifeng Wang and Xiaojun Yuan and Xin Sun and Ya Zhang and Kun Sun and Yanfeng Wang and Weidi Xie},
+keywords = {pathology foundation model, cancer diagnosis, vision-language, knowledge enhancement},
+}
+```
  
 
 <img src=resources/logo.png> 
