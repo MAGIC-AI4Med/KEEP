@@ -158,12 +158,7 @@ If you find our work useful in your research, please consider citing our [paper]
 
 
 ```
-@article{zhou2024keep,
-  title={A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis},
-  author={Xiao Zhou, Luoyi Sun, Dexuan He, Wenbin Guan, Ruifen Wang, Lifeng Wang, Xin Sun, Kun Sun, Ya Zhang, Yanfeng Wang, Weidi Xie},
-  journal={arXiv preprint arXiv:2412.13126},
-  year={2024}
-}
+Zhou, X., Sun, L., He, D., Guan, W., Wang, G., Wang, R., Wang, L., Yuan, X., Sun, X., Zhang, Y., Sun, K., Wang, Y., Xie, W., n.d. Knowledge-enhanced pretraining for vision-language pathology foundation model on cancer diagnosis. Cancer Cell. https://doi.org/10.1016/j.ccell.2026.01.019
 ``` 
 
 <img src=resources/logo.png> 
