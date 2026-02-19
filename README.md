@@ -1,6 +1,6 @@
 # KEEP (**K**nowledg**E**-**E**nhanced **P**athology)
 
-[Cancer Cell] The official codes for **"A Knowledge-enhanced Pathology Vision-language Foundation Model for Cancer Diagnosis"**
+[Cancer Cell] The official codes for **"Knowledge-enhanced pretraining for vision-language pathology foundation model on cancer diagnosis"**
 
 [Paper](https://www.cell.com/cancer-cell/fulltext/S1535-6108(26)00058-9) | [Hugging Face](https://huggingface.co/Astaxanthin/KEEP) | [Website](https://loiesun.github.io/keep/) | [Cite](#reference)
 
@@ -13,9 +13,9 @@
 
 ## News
 
-**[02/20/2026]** **(NEW)**: Our paper has been published in *Cancer Cell*.
+**[02/20/2026]**: Our paper has been published in *Cancer Cell*.
 
-**[01/20/2026]** **(NEW)**: A pediatric rare cancer pathology WSI dataset has been released on [Huggingface](https://huggingface.co/datasets/Firehdx233/KidRare/tree/main).
+**[01/20/2026]**: A pediatric rare cancer pathology WSI dataset has been released on [Huggingface](https://huggingface.co/datasets/Firehdx233/KidRare/tree/main).
 
 **[03/31/2025]**: Datasets, including manual annotation of pathology images, disease knowledge graph, and pathology image-text semantic groups for KEEP training, are now released on [Huggingface]([https://huggingface.co/datasets/Firehdx233/KidRare/tree/main](https://huggingface.co/datasets/Loie/KEEP_dataset)). 
 
@@ -40,7 +40,7 @@
 
 
 ## Quick Start
-You can directly load **KEEP** from Huggingface and conduct inference with the following codes:
+You can directly load **KEEP** from Huggingface and conduct inference with the following code:
 ```python
 from transformers import AutoModel, AutoTokenizer
 from torchvision import transforms
@@ -95,7 +95,7 @@ results = model(img_path)  # detect pathology regions on an image
 
 
 ## Knowledge Construction and Encoding
-For knowledge graph construction, we download the knowledge structure from  [Disease Ontology (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**, which can also be downloaded from [KEEP_dataset](https://huggingface.co/datasets/Loie/KEEP_dataset) upon requests.
+For knowledge graph construction, we download the knowledge structure from  [Disease Ontology (DO)](https://disease-ontology.org/do/). Then, we search for synonyms in [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) based on the ```UMLS_CUI``` of each entity and construct the final **KG**, which can also be downloaded from [KEEP_dataset](https://huggingface.co/datasets/Loie/KEEP_dataset).
 
 For disease knowledge encoding, we train the knowledge encoder in a way similar to our previous work [KEP](https://github.com/MAGIC-AI4Med/KEP). You can find more detailed information in the repository. In this part, we use 4 A100 GPUs.
 
@@ -122,7 +122,7 @@ python -m path_training.main
 
 ## Performance Comparisons with Other Models
 
-We present benchmark results for a range of representative tasks. A complete set of benchmarks can be found in the [paper](https://arxiv.org/abs/2412.13126). These results will be updated with each new iteration of KEEP. 
+We present benchmark results for a range of representative tasks. A complete set of benchmarks can be found in the [paper]([https://arxiv.org/abs/2412.13126](https://www.cell.com/cancer-cell/fulltext/S1535-6108(26)00058-9)). These results will be updated with each new iteration of KEEP. 
 
 ### Zero-shot Cancer Region Segmentation (DICE) 
 | Models | PLIP[[1]](https://www.nature.com/articles/s41591-023-02504-3) | QuiltNet [[2]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/775ec578876fa6812c062644964b9870-Abstract-Datasets_and_Benchmarks.html) |   MI-Zero (Pub) [[3]](https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html) | CONCH [[4]](https://www.nature.com/articles/s41591-024-02856-4) | **KEEP(Ours)**  |
