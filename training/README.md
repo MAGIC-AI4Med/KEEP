@@ -8,7 +8,7 @@ Before training, you must prepare the following datasets and model weights:
 
 #### Knowledge Data
 - **Disease Ontology and UMLS**: These resources must be incorporated to construct a disease knowledge graph
-- Example of the final KG can be found at: `./train_data/example_konwledge_graph.json`
+- Example of the final KG can be found at: `./train_data/example_konwledge_graph.json` 
 
 #### Training Data
 - **OpenPath and Quilt1M datasets**: Follow the data filtering process described in the KEEP paper to cluster image-text pairs into semantic groups
@@ -47,4 +47,5 @@ Before training, you must prepare the following datasets and model weights:
 ├── models/
 │   ├── PubmedBERT/
 │   ├── KNOWLEDGE_BERT/
+
 └── └── UNI/
