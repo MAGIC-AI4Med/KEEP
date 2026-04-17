@@ -159,12 +159,15 @@ We present benchmark results for a range of representative tasks. A complete set
 The project was built on top of amazing repositories such as [MI-Zero](https://github.com/mahmoodlab/MI-Zero), [CLAM](https://github.com/mahmoodlab/CLAM), [OpenCLIP](https://github.com/mlfoundations/open_clip). We thank the authors and developers for their contribution.
 
 ## Reference
-If you find our work useful in your research, please consider citing our [paper](https://arxiv.org/abs/2412.13126):
+If you find our work useful in your research, please consider citing our [paper](https://www.cell.com/cancer-cell/fulltext/S1535-6108(26)00058-9):
 
 ```
-@article{ZHOU2026,
+@article{ZHOU2026777,
 title = {Knowledge-enhanced pretraining for vision-language pathology foundation model on cancer diagnosis},
 journal = {Cancer Cell},
+volume = {44},
+number = {4},
+pages = {777-791.e7},
 year = {2026},
 issn = {1535-6108},
 doi = {https://doi.org/10.1016/j.ccell.2026.01.019},
