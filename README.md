@@ -161,7 +161,7 @@ The project was built on top of amazing repositories such as [MI-Zero](https://g
 ## Reference
 If you find our work useful in your research, please consider citing our [paper](https://www.cell.com/cancer-cell/fulltext/S1535-6108(26)00058-9):
 
-```
+```bibtex
 @article{ZHOU2026777,
 title = {Knowledge-enhanced pretraining for vision-language pathology foundation model on cancer diagnosis},
 journal = {Cancer Cell},
